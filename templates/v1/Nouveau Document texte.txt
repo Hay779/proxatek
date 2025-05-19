@@ -1,0 +1,80 @@
+[ PROXATEK - Dossier Racine du Projet ]
+    |
+    |--- index.html                     // Page d'accueil
+    |--- contact.html
+    |--- questionnaire.html
+    |--- actualites.html
+    |    L--- (potentiellement : article-exemple.html, etc. dans un sous-dossier actualites/details/ si beaucoup d'articles)
+    |--- a-propos.html
+    |--- partenariat.html
+    |--- mentions-legales.html
+    |--- politique-confidentialite.html
+    |
+    |--- style.css                      // Feuille de style principale
+    |--- script.js                      // Fichier JavaScript principal
+    |
+    |--- img/                           // Dossier pour toutes les images
+    |    |--- proxatek-icon-bleu.png
+    |    |--- proxatek-logo-principal-bleu.png
+    |    |--- proxatek-logo-principal-blanc.png
+    |    |--- diagnostic-parc-informatique.png
+    |    |--- diagnostic-reseau-infrastructure.png
+    |    |--- diagnostic-donnees-cybersecurite.png
+    |    |--- secteur-medical.jpg
+    |    |--- secteur-commerce.jpg
+    |    |--- secteur-artisans.jpg
+    |    |--- proxatek-valeurs.jpg
+    |    |--- proxatek-nouveau-service.png
+    |    |--- logo-entreprise-a.png
+    |    |--- logo-entreprise-b.png
+    |    |--- background-partenariat.jpg
+    |    L--- ... (autres images pour les pages métiers, etc.)
+    |
+    |--- services/                      // Dossier pour les pages de services détaillées
+    |    |--- catalogue.html
+    |    |--- infogerance.html
+    |    |--- cybersecurite.html
+    |    |--- cloud.html
+    |    |--- reseau.html
+    |    |--- materiel.html
+    |    |--- audit.html
+    |    L--- supervision.html
+    |
+    |--- solutions/                     // Dossier pour les pages solutions par métier/secteur
+    |    |
+    |    |--- index.html ou pour-votre-metier.html  // Page "Hub" listant/présentant les solutions par métier
+    |    |
+    |    |--- cabinets-medicaux-generalistes.html
+    |    |--- cabinets-specialistes.html
+    |    |--- pharmacies.html
+    |    |--- laboratoires-analyses.html
+    |    |--- etablissements-medico-sociaux.html
+    |    |
+    |    |--- cabinets-avocats.html
+    |    |--- etudes-notariales.html
+    |    |--- cabinets-expertise-comptable.html
+    |    |--- agences-conseil-communication.html
+    |    |
+    |    |--- commerce-detail-boutiques.html
+    |    |--- e-commerce-vente-en-ligne.html
+    |    |--- hotellerie-restauration.html
+    |    |
+    |    |--- artisans-batiment.html
+    |    |--- entreprises-btp-pme.html
+    |    |--- architectes-bureaux-etudes.html
+    |    |
+    |    |--- agences-immobilieres.html
+    |    |--- societes-services-btob.html
+    |    |--- petites-industries-production.html
+    |    |
+    |    |--- associations-fondations.html
+    |    |--- organismes-formation.html
+    |    L--- startups-tech.html
+    |
+    |--- _templates/                    // (Optionnel - Pour votre usage local, non déployé)
+    |    L--- template-solution-metier.html
+    |    L--- (potentiellement d'autres modèles : template-service.html, template-article.html)
+    |
+    L--- assets/                        // (Optionnel - Pour polices locales, PDFs, etc.)
+         L--- fonts/
+              L--- ...

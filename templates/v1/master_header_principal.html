@@ -1,0 +1,58 @@
+<!-- 
+    MASTER TEMPLATE POUR LE HEADER PRINCIPAL (<header class="site-header-custom">)
+    Instructions d'utilisation :
+    1. Copiez tout le contenu de ce fichier.
+    2. Collez-le pour remplacer l'ancien <header> dans la page HTML cible.
+    3. AJUSTEZ MANUELLEMENT LES VALEURS SUIVANTES :
+        - Tous les "CHEMIN_VERS_..." pour les href et srcset, en fonction de l'emplacement de la page cible (utilisez "../" si nécessaire).
+        - "ID_UNIQUE_NAV_MOBILE_PAGE" pour l'id du div.mobile-nav-custom et l'attribut aria-controls du bouton toggle.
+        - Ajoutez la classe "active" au bon lien <a> dans div#ID_UNIQUE_NAV_MOBILE_PAGE (et dans nav.main-nav-custom si vous y ajoutez des liens).
+        - Remplacez le numéro de téléphone placeholder.
+-->
+<header class="site-header-custom">
+    <div class="container header-custom-container">
+        <div class="logo-proxatek-custom">
+            <a href="CHEMIN_VERS_INDEX.html" title="Accueil Proxatek">
+                <picture>
+                    <source media="(max-width:850px)" srcset="CHEMIN_VERS_IMG/proxatek-logo-violet_P.png">
+                    <img src="CHEMIN_VERS_IMG/proxatek-logo-violet_full.png" alt="Proxatek Logo" onerror="this.style.display='none'; this.onerror=null; document.getElementById('logoTextFallbackHeader').style.display='block';" loading="eager">
+                    <!-- Note: Pas de style en ligne ici pour height/padding (Option A) -->
+                </picture>
+                <span id="logoTextFallbackHeader" style="display:none; font-size:22px; font-weight:bold; color:var(--custom-purple-dark);">PROXATEK</span>
+            </a>
+        </div>
+        <nav class="main-nav-custom">
+            <!-- Navigation principale desktop épurée. -->
+            <!-- Exemple si vous voulez réintégrer des liens spécifiques :
+            <a href="CHEMIN_VERS_ACTUALITES.html" data-i18n="nav.news">Actualités</a>
+            -->
+        </nav>
+        <div class="header-actions-custom">
+            <a href="tel:+33412345678" class="phone-link-custom"><i class="fas fa-phone-alt"></i> 04 12 34 56 78</a> <!-- **NUMÉRO À REMPLACER** -->
+            <a href="CHEMIN_VERS_QUESTIONNAIRE.html" class="btn btn-primary-custom" data-i18n="nav.startQuote">Commencer votre devis</a>
+        </div>
+        <button class="mobile-menu-toggle-custom" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="ID_UNIQUE_NAV_MOBILE_PAGE">
+            <i class="fas fa-bars icon-open"></i>
+            <i class="fas fa-times icon-close"></i>
+        </button>
+    </div>
+    <div class="mobile-nav-custom" id="ID_UNIQUE_NAV_MOBILE_PAGE">
+        <a href="CHEMIN_VERS_INDEX.html#prestations-proxatek" class="mobile-nav-main-link" data-i18n="mobileNav.ourServices">Nos Services</a>
+        <hr>
+        <a href="CHEMIN_VERS_SERVICES/infogerance.html" data-i18n="services.infogerance.titleShort">Infogérance</a>
+        <a href="CHEMIN_VERS_SERVICES/cybersecurite.html" data-i18n="services.cybersecurity.titleShort">Cybersécurité</a>
+        <a href="CHEMIN_VERS_SERVICES/cloud.html" data-i18n="services.cloud.titleShort">Solutions Cloud</a>
+        <a href="CHEMIN_VERS_SERVICES/reseau.html" data-i18n="services.network.titleShort">Réseau</a>
+        <a href="CHEMIN_VERS_SERVICES/materiel.html" data-i18n="services.hardware.titleShort">Matériel</a>
+        <a href="CHEMIN_VERS_SERVICES/audit.html" data-i18n="services.audit.titleShort">Audit & Conseil</a>
+        <hr>
+        <a href="CHEMIN_VERS_INDEX.html#pourquoi-proxatek" data-i18n="mobileNav.whyUs">Pourquoi Nous ?</a>
+        <a href="CHEMIN_VERS_ACTUALITES.html" data-i18n="mobileNav.news">Actualités</a>
+        <a href="CHEMIN_VERS_A_PROPOS.html" data-i18n="mobileNav.aboutUs">À Propos</a>
+        <a href="CHEMIN_VERS_PARTENARIAT.html" data-i18n="mobileNav.partnership">Partenariat</a>
+        <a href="CHEMIN_VERS_CONTACT.html" data-i18n="mobileNav.contact">Contact</a>
+        <hr>
+        <a href="CHEMIN_VERS_QUESTIONNAIRE.html" class="btn btn-accent-custom mobile-nav-btn" data-i18n="mobileNav.quoteSimulator">Simulateur Devis</a>
+        <a href="CHEMIN_VERS_CONTACT.html?urgence=true" class="btn btn-secondary-custom mobile-nav-btn" data-i18n="mobileNav.urgentSupport">Support Urgent</a>
+    </div>
+</header>

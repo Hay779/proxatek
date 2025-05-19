@@ -1,0 +1,12 @@
+votre-site/
+├── index.html
+├── style.css
+├── images/
+│   ├── barre-progression.png        (pour le 1er bloc)
+│   ├── parc-informatique.png        (pour le 1er bloc)
+│   ├── reseau-infrastructure.png    (pour le 1er bloc)
+│   ├── donnees-cybersecurite.png    (pour le 1er bloc)
+│   ├── icon-infrastructure.svg      (ou .png, pour le 2e bloc)
+│   ├── icon-securite.svg            (ou .png, pour le 2e bloc)
+│   ├── icon-support.svg             (ou .png, pour le 2e bloc)
+│   └── (autres images si besoin)

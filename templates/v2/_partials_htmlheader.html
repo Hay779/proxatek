@@ -1,0 +1,58 @@
+<header class="site-header-custom" role="banner">
+    <div class="container header-custom-container">
+        <div class="logo-proxatek-custom">
+            <a href="/index.html" title="Accueil Proxatek - Solutions IT pour PME">
+                <picture>
+                    <source media="(max-width:850px)" srcset="/img/proxatek-logo-violet_P.png">
+                    <img src="/img/proxatek-logo-violet_full.png"
+                         alt="Logo Proxatek - Solutions IT pour PME"
+                         onerror="this.style.display='none'; this.onerror=null; document.getElementById('logoTextFallbackHeader').style.display='block';"
+                         loading="eager">
+                </picture>
+                <span id="logoTextFallbackHeader" class="logo-text-fallback">PROXATEK</span>
+            </a>
+        </div>
+        <nav class="main-nav-custom" aria-label="Navigation principale de bureau">
+            <!-- Liens de navigation principale desktop (si ajoutés) -->
+        </nav>
+
+        <!-- Actions pour Desktop uniquement -->
+        <div class="header-actions-custom">
+            <a href="tel:+33412345678" class="phone-link-custom"> <!-- **NUMÉRO À REMPLACER** -->
+                <i class="fas fa-phone-alt" aria-hidden="true"></i> 04 12 34 56 78
+            </a>
+            <a href="/questionnaire.html" class="btn btn-primary-custom cta-header-desktop" data-i18n="nav.startQuote">Commencer votre devis</a>
+        </div>
+
+        <!-- Actions pour Mobile/Tablette (Bouton Devis court + Burger) -->
+        <div class="header-actions-mobile-custom">
+            <a href="/questionnaire.html" class="btn btn-primary-custom btn-small cta-header-mobile" data-i18n="nav.startQuoteMobile" <!-- ou "nav.quoteShort" --> >Devis</a>
+            <button class="mobile-menu-toggle-custom" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNavMenuUniversal">
+                <i class="fas fa-bars icon-open" aria-hidden="true"></i>
+                <i class="fas fa-times icon-close" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-nav-custom" id="mobileNavMenuUniversal" aria-label="Menu de navigation mobile">
+        <a href="/#prestations-proxatek" class="mobile-nav-main-link" data-i18n="mobileNav.ourServices">Nos Services</a>
+        <hr role="separator">
+        <a href="/services/infogerance.html" data-i18n="services.infogerance.titleShort">Infogérance</a>
+        <a href="/services/cybersecurite.html" data-i18n="services.cybersecurity.titleShort">Cybersécurité</a>
+        <a href="/services/cloud.html" data-i18n="services.cloud.titleShort">Solutions Cloud</a>
+        <a href="/services/reseau.html" data-i18n="services.network.titleShort">Réseau</a>
+        <a href="/services/materiel.html" data-i18n="services.hardware.titleShort">Matériel</a>
+        <a href="/services/audit.html" data-i18n="services.audit.titleShort">Audit & Conseil</a>
+        <hr role="separator">
+        <a href="/#pourquoi-proxatek" data-i18n="mobileNav.whyUs">Pourquoi Nous ?</a>
+        <a href="/actualites.html" data-i18n="mobileNav.news">Actualités</a>
+        <a href="/a-propos.html" data-i18n="mobileNav.aboutUs">À Propos</a>
+        <a href="/partenariat.html" data-i18n="mobileNav.partnership">Partenariat</a>
+        <a href="/contact.html" data-i18n="mobileNav.contact">Contact</a>
+        <hr role="separator">
+        <!-- Le bouton "Simulateur Devis" peut rester ici pour accès facile même si un bouton "Devis" est dans le header mobile -->
+        <a href="/questionnaire.html" class="btn btn-accent-custom mobile-nav-btn" data-i18n="mobileNav.quoteSimulator">Simulateur Devis Complet</a>
+        <a href="/contact.html?urgence=true" class="btn btn-secondary-custom mobile-nav-btn" data-i18n="mobileNav.urgentSupport">Support Urgent</a>
+    </div>
+</header>

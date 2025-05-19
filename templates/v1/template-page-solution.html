@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- META TITRE: "Solutions IT pour [Nom du Métier] | Proxatek" (Dynamique) -->
+    <title>Solutions IT pour [Nom du Métier] - Proxatek</title>
+    <!-- META DESCRIPTION: "Proxatek propose des solutions informatiques sur mesure pour [Nom du Métier] : [Bénéfice Clé 1], [Bénéfice Clé 2]. Découvrez nos services." (Dynamique) -->
+    <meta name="description" content="Proxatek propose des solutions informatiques sur mesure pour [Nom du Métier] : gestion de parc, cybersécurité, cloud. Découvrez nos services adaptés à vos besoins spécifiques.">
+    
+    <link rel="stylesheet" href="../style.css"> <!-- Ajuster le chemin si besoin -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="icon" href="../img/proxatek-icon-bleu.png" type="image/png"> <!-- Ajuster le chemin si besoin -->
+
+    <!-- Style spécifique à cette page si nécessaire, ou directement dans style.css -->
+    <style>
+        .hero-metier {
+            background-color: var(--hostinger-purple-primary); /* Ou une image de fond thématique */
+            color: var(--hostinger-text-light);
+            padding: 60px 0;
+            text-align: center;
+        }
+        .hero-metier h1 {
+            color: var(--hostinger-text-light);
+            font-size: 2.8rem; /* Plus grand pour la page métier */
+            margin-bottom: 15px;
+        }
+        .hero-metier .breadcrumb-metier {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        .hero-metier .breadcrumb-metier a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+        .hero-metier .breadcrumb-metier a:hover {
+            color: var(--hostinger-text-light);
+            text-decoration: underline;
+        }
+        .hero-metier .hero-subtitle-metier {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
+        }
+
+        .metier-content-section {
+            padding: var(--section-padding);
+        }
+        .metier-content-section h2 { /* Style pour les H2 de la page métier */
+            font-size: 2rem;
+            color: var(--hostinger-purple-dark);
+            margin-bottom: 30px;
+            text-align: center; /* Ou left, selon le design */
+        }
+        .metier-content-section h2.text-left { text-align: left; }
+
+        .challenges-grid, .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .challenge-card, .solution-card {
+            background-color: var(--hostinger-card-action-bg);
+            padding: 25px;
+            border-radius: var(--card-border-radius);
+            box-shadow: var(--shadow-light);
+        }
+        .challenge-card i, .solution-card i.fa-solid { /* Icônes spécifiques pour les défis et solutions */
+            font-size: 1.5rem;
+            color: var(--hostinger-magenta-accent);
+            margin-bottom: 15px;
+            display: block; /* Ou inline-block centré */
+        }
+        .challenge-card h3, .solution-card h3 {
+            font-size: 1.1rem;
+            color: var(--hostinger-text-primary);
+            margin-bottom: 10px;
+        }
+        .challenge-card p, .solution-card p, .solution-card ul {
+            font-size: 0.9rem;
+            color: var(--hostinger-text-secondary);
+        }
+        .solution-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+        .solution-card ul li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .solution-card ul li i.fa-check {
+            color: var(--hostinger-magenta-accent);
+            margin-right: 8px;
+            font-size: 0.8em;
+            margin-top: 0.25em;
+            flex-shrink: 0;
+        }
+        .case-study-metier {
+            background-color: var(--hostinger-lavender-bg);
+            padding: 30px;
+            border-radius: var(--card-border-radius);
+            margin-bottom: 40px;
+        }
+        .case-study-metier blockquote {
+            font-style: italic;
+            color: var(--hostinger-text-secondary);
+            border-left: 3px solid var(--hostinger-purple-primary);
+            padding-left: 15px;
+            margin-bottom: 10px;
+        }
+        .case-study-metier .author {
+            font-weight: bold;
+            color: var(--hostinger-text-primary);
+        }
+        .cta-metier {
+            background-color: var(--hostinger-light-grey-bg); /* Ou un gradient */
+            padding: 50px 0;
+            text-align: center;
+        }
+        .faq-metier dt {
+            font-weight: bold;
+            color: var(--hostinger-purple-dark);
+            margin-top: 20px;
+            margin-bottom: 5px;
+            cursor: pointer; /* If you add JS for toggle */
+        }
+        .faq-metier dd {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: var(--hostinger-text-secondary);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Inclure le Header commun (peut être via un include PHP/JS si vous passez à un système de templating) -->
+    <header class="site-header-hostinger">
+        <!-- ... Contenu du header identique à index.html ... -->
+        <!-- Assurez-vous que les chemins des liens et images dans le header sont corrects (ex: ../index.html) -->
+    </header>
+    <nav class="services-navigation-bar">
+        <!-- ... Contenu de la nav services identique à index.html ... -->
+        <!-- Assurez-vous que les chemins des liens sont corrects (ex: ../services/infogerance.html) -->
+    </nav>
+
+    <main>
+        <!-- ==================== HERO SECTION SPÉCIFIQUE AU MÉTIER ==================== -->
+        <section class="hero-metier">
+            <div class="container">
+                <div class="breadcrumb-metier">
+                    <a href="../index.html">Accueil</a> > <a href="index.html">Solutions par métier</a> > <span class="current-metier">[Nom du Métier]</span>
+                </div>
+                <h1>Solutions IT pour <span class="highlight-text-metier">[Nom du Métier]</span></h1>
+                <p class="hero-subtitle-metier">Proxatek accompagne les <span class="lowercase-metier">[nom du métier au pluriel]</span> à optimiser leur performance et sécuriser leurs données grâce à une expertise informatique dédiée.</p>
+                <a href="../contact.html?sujet=DemandeInfo-[CodeMetier]" class="btn btn-accent-hostinger btn-large">Discutons de vos besoins spécifiques</a>
+            </div>
+        </section>
+
+        <!-- ==================== DÉFIS SPÉCIFIQUES DU MÉTIER ==================== -->
+        <section class="metier-content-section">
+            <div class="container">
+                <h2>Les Enjeux Informatiques Clés pour les <span class="uppercase-metier">[Nom du Métier au pluriel]</span></h2>
+                <div class="challenges-grid">
+                    <!-- Répéter cette carte pour 3-4 défis -->
+                    <div class="challenge-card">
+                        <i class="fas fa-shield-alt"></i> <!-- Icône Pertinente -->
+                        <h3>[Défi Spécifique 1 : ex: Conformité Réglementaire]</h3>
+                        <p>[Courte description du défi pour ce métier. Pourquoi est-ce un problème ? Quelles conséquences ?]</p>
+                    </div>
+                    <div class="challenge-card">
+                        <i class="fas fa-database"></i> <!-- Icône Pertinente -->
+                        <h3>[Défi Spécifique 2 : ex: Gestion des Données Sensibles]</h3>
+                        <p>[Courte description du défi.]</p>
+                    </div>
+                    <div class="challenge-card">
+                        <i class="fas fa-cogs"></i> <!-- Icône Pertinente -->
+                        <h3>[Défi Spécifique 3 : ex: Optimisation des Processus Métier]</h3>
+                        <p>[Courte description du défi.]</p>
+                    </div>
+                    <!-- Fin répétition carte défi -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NOS SOLUTIONS ADAPTÉES ==================== -->
+        <section class="metier-content-section section-bg-light">
+            <div class="container">
+                <h2 class="text-left">Comment Proxatek Répond aux Besoins des <span class="uppercase-metier">[Nom du Métier au pluriel]</span></h2>
+                <p class="section-subtitle-hostinger text-left" style="margin-left:0; max-width:none; margin-bottom: 40px;">Nous avons développé une gamme de services spécifiquement pensés pour surmonter vos défis quotidiens et atteindre vos objectifs stratégiques.</p>
+                
+                <!-- Répéter cette section pour chaque service Proxatek pertinent pour ce métier -->
+                <div class="solution-detail">
+                    <h3><i class="fas fa-cogs"></i> Infogérance Proactive pour <span class="lowercase-metier">[nom du métier]</span></h3>
+                    <p>[Expliquer comment l'infogérance de Proxatek est adaptée à ce métier. Mettre en avant les bénéfices spécifiques.]</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> [Avantage spécifique 1 de l'infogérance pour ce métier]</li>
+                        <li><i class="fas fa-check"></i> [Avantage spécifique 2 de l'infogérance pour ce métier]</li>
+                        <li><i class="fas fa-check"></i> [Avantage spécifique 3 de l'infogérance pour ce métier]</li>
+                    </ul>
+                    <a href="../services/infogerance.html" class="btn btn-secondary-hostinger btn-small" style="margin-top:15px;">En savoir plus sur notre infogérance</a>
+                </div>
+                <hr style="margin: 30px 0; border-color: var(--hostinger-border-color);">
+
+                <div class="solution-detail">
+                    <h3><i class="fas fa-shield-virus"></i> Cybersécurité Renforcée pour <span class="lowercase-metier">[nom du métier]</span></h3>
+                    <p>[Expliquer comment la cybersécurité de Proxatek est adaptée. Ex: Protection des données patients pour médecins, sécurisation des transactions pour e-commerçants.]</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> [Avantage spécifique 1 de la cybersécurité pour ce métier]</li>
+                        <li><i class="fas fa-check"></i> [Avantage spécifique 2 de la cybersécurité pour ce métier]</li>
+                    </ul>
+                    <a href="../services/cybersecurite.html" class="btn btn-secondary-hostinger btn-small" style="margin-top:15px;">Découvrir nos solutions de cybersécurité</a>
+                </div>
+                <hr style="margin: 30px 0; border-color: var(--hostinger-border-color);">
+                
+                <div class="solution-detail">
+                    <h3><i class="fas fa-cloud"></i> Solutions Cloud sur Mesure pour <span class="lowercase-metier">[nom du métier]</span></h3>
+                    <p>[Expliquer comment le cloud de Proxatek est adapté. Ex: Sauvegarde HDS pour la santé, collaboration pour les agences.]</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> [Avantage spécifique 1 du cloud pour ce métier]</li>
+                    </ul>
+                     <a href="../services/cloud.html" class="btn btn-secondary-hostinger btn-small" style="margin-top:15px;">Explorer nos offres cloud</a>
+                </div>
+                <!-- Fin répétition section service -->
+            </div>
+        </section>
+
+        <!-- ==================== ÉTUDE DE CAS / TÉMOIGNAGE (Optionnel mais fortement recommandé) ==================== -->
+        <!-- Afficher cette section SI vous avez un témoignage spécifique pour ce métier -->
+        <section class="metier-content-section">
+            <div class="container">
+                <h2>Ils nous font confiance : Le cas de [Nom Client Métier]</h2>
+                <div class="case-study-metier">
+                     <!-- Vous pouvez reprendre le style .case-study-card-hostinger ou un style dédié -->
+                    <div class="case-study-header-hostinger">
+                        <img src="../img/logo-client-metier.png" alt="Logo [Nom Client Métier]" class="company-logo-testimonial-hostinger">
+                        <div class="case-study-info-hostinger">
+                            <h3>[Titre Accrocheur du Témoignage]</h3>
+                            <span class="industry-tag-hostinger">[Nom du Métier]</span>
+                        </div>
+                    </div>
+                    <blockquote>
+                        "[Citation du client sur comment Proxatek l'a aidé, en lien avec les défis et solutions mentionnés plus haut.]"
+                    </blockquote>
+                    <p class="author">- [Nom du Contact Client], [Poste] chez [Nom Client Métier]</p>
+                    <!-- Optionnel: Résultats clés obtenus -->
+                    <!-- <div class="results-section-hostinger"> ... </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== POURQUOI CHOISIR PROXATEK POUR VOTRE MÉTIER ? ==================== -->
+        <section class="metier-content-section section-bg-light">
+            <div class="container">
+                 <h2>Pourquoi les <span class="uppercase-metier">[Nom du Métier au pluriel]</span> choisissent Proxatek ?</h2>
+                <!-- Reprendre un style similaire à .feature-list-hostinger de l'index -->
+                <ul class="feature-list-hostinger" style="max-width: 800px; margin-left:auto; margin-right:auto;">
+                    <li><span class="feature-icon-hostinger"><i class="fas fa-check"></i></span> <span data-i18n="whyProxatek.metier.feature1">Expertise avérée des problématiques spécifiques aux <span class="lowercase-metier">[nom du métier au pluriel]</span>.</span></li>
+                    <li><span class="feature-icon-hostinger"><i class="fas fa-check"></i></span> <span data-i18n="whyProxatek.metier.feature2">Solutions 100% personnalisées et adaptées à votre structure et budget.</span></li>
+                    <li><span class="feature-icon-hostinger"><i class="fas fa-check"></i></span> <span data-i18n="whyProxatek.metier.feature3">Accompagnement de proximité par des consultants qui comprennent votre secteur.</span></li>
+                    <li><span class="feature-icon-hostinger"><i class="fas fa-check"></i></span> <span data-i18n="whyProxatek.metier.feature4">Veille technologique constante pour vous offrir les meilleures innovations.</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ==================== FAQ SPÉCIFIQUE AU MÉTIER (Optionnel) ==================== -->
+        <section class="metier-content-section">
+            <div class="container">
+                <h2>Questions Fréquentes des <span class="uppercase-metier">[Nom du Métier au pluriel]</span></h2>
+                <dl class="faq-metier">
+                    <dt>[Question 1 spécifique au métier et aux solutions IT Proxatek]</dt>
+                    <dd>[Réponse claire et concise.]</dd>
+                    <dt>[Question 2 spécifique au métier]</dt>
+                    <dd>[Réponse.]</dd>
+                    <dt>[Question 3 spécifique au métier]</dt>
+                    <dd>[Réponse.]</dd>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ==================== CTA FINAL SPÉCIFIQUE AU MÉTIER ==================== -->
+        <section class="cta-metier">
+            <div class="container">
+                <h2>Prêt à optimiser l'informatique de votre <span class="lowercase-metier">[nom du métier]</span> ?</h2>
+                <p>Contactez nos experts dès aujourd'hui pour un audit gratuit ou un devis personnalisé adapté à vos besoins de <span class="lowercase-metier">[nom du métier]</span>.</p>
+                <a href="../contact.html?sujet=AuditGratuit-[CodeMetier]" class="btn btn-primary-hostinger btn-large" style="margin-right: 10px;">Demander un Audit Gratuit</a>
+                <a href="../questionnaire.html?metier=[CodeMetier]" class="btn btn-accent-hostinger btn-large">Obtenir un Devis Express</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Inclure le Footer commun -->
+    <footer class="site-footer-proxatek">
+        <!-- ... Contenu du footer identique à index.html ... -->
+        <!-- Assurez-vous que les chemins des liens et images sont corrects -->
+    </footer>
+
+    <a href="../contact.html?urgence=true" class="floating-help-btn-proxatek" aria-label="Contacter Proxatek">
+        <i class="fas fa-headset"></i>
+    </a>
+
+    <script src="../script.js"></script> <!-- Ajuster le chemin si besoin -->
+    <!-- Script JS spécifique à la page si besoin (ex: pour FAQ interactive) -->
+
+</body>
+</html>
