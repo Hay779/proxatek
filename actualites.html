@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités & Blog - Proxatek</title> <!-- Titre plus spécifique -->
+    <meta name="description" content="Découvrez les dernières informations du secteur IT, les nouveautés Proxatek, et nos conseils d'experts pour optimiser votre informatique et protéger votre PME.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="icon" href="img/Logoproxatek.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css"> <!-- Style CSS principal -->
+    <link rel="stylesheet" href="actualites.css"> <!-- Style CSS spécifique à cette page -->
+
+</head>
+<body>
+    <!-- N'oubliez pas d'inclure votre header et barre de navigation ici, comme dans index.html -->
+    <!-- Placeholder pour le header -->
+    <header class="site-header-custom">
+        <!-- Contenu du header copié de index.html -->
+    </header>
+    <nav class="services-navigation-bar" aria-label="Navigation des services principaux">
+        <!-- Contenu de la barre de navigation des services copié de index.html -->
+    </nav>
+    <!-- FIN Placeholder pour le header -->
+
+    <main>
+        <section class="hero-service" style="background-color: var(--custom-light-grey-bg);">
+            <div class="container">
+                <div class="breadcrumb-service" style="color: var(--custom-text-secondary);">
+                    <a href="index.html" style="color: var(--custom-purple-primary);">Accueil</a> > <span class="current-service" style="color: var(--custom-text-primary);">Actualités & Blog</span>
+                </div>
+                <h1 style="color: var(--custom-purple-dark);">Nos Actualités & <span class="highlight-text-service" style="color: var(--custom-magenta-accent);">Conseils IT</span></h1>
+                <p class="hero-subtitle-service" style="color: var(--custom-text-secondary); max-width: 800px;">Découvrez les dernières informations du secteur IT, les nouveautés Proxatek, et nos conseils d'experts pour optimiser votre informatique et protéger votre PME.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <!-- Filtres (optionnel) -->
+                <div class="filters-actualites">
+                    <button class="filter-btn active" data-filter="all">Tout</button>
+                    <button class="filter-btn" data-filter="cybersecurite">Cybersécurité</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud</button>
+                    <button class="filter-btn" data-filter="proxatek-news">Nouveautés Proxatek</button>
+                    <button class="filter-btn" data-filter="productivite">Productivité</button>
+                </div>
+
+                <div class="articles-grid product-like-grid">
+                    <!-- Article 1 -->
+                    <article class="article-card product-like-card" data-category="cybersecurite">
+                        <a href="actualites/article-cybersecurite-pme-2024.html" class="article-card-link">
+                            <div class="article-card-image">
+                                <img src="img/blog/article-cybersecurite-pme.jpg" alt="Bouclier protégeant un ordinateur" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250/783F8E/FFFFFF?text=Cybersecu+PME'">
+                            </div>
+                            <div class="article-card-content">
+                                <span class="article-category-tag">Cybersécurité</span>
+                                <h3 class="article-title">Top 5 des menaces de cybersécurité pour les PME en 2024</h3>
+                                <p class="article-excerpt">Anticipez les risques et protégez efficacement votre entreprise...</p>
+                                <div class="article-card-footer">
+                                    <span class="article-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 15 Mars 2024</span>
+                                    <span class="learn-more-inline">Lire la suite <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="article-card product-like-card" data-category="cloud">
+                        <a href="actualites/article-avantages-cloud-pme.html" class="article-card-link">
+                            <div class="article-card-image">
+                                <img src="img/blog/article-cloud-avantages.jpg" alt="Nuages symbolisant le cloud computing" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250/5229CD/FFFFFF?text=Cloud+PME'">
+                            </div>
+                            <div class="article-card-content">
+                                <span class="article-category-tag">Solutions Cloud</span>
+                                <h3 class="article-title">Passer au Cloud : Quels avantages concrets pour votre PME ?</h3>
+                                <p class="article-excerpt">Flexibilité, collaboration, économies... Explorez les bénéfices.</p>
+                                <div class="article-card-footer">
+                                    <span class="article-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 02 Mars 2024</span>
+                                    <span class="learn-more-inline">Lire la suite <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="article-card product-like-card" data-category="proxatek-news">
+                        <a href="actualites/article-nouveau-service-supervision.html" class="article-card-link">
+                            <div class="article-card-image">
+                                <img src="img/proxatek-nouveau-service.png" alt="Interface de la solution de supervision Proxatek" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250/D9006C/FFFFFF?text=Nouveauté'">
+                            </div>
+                            <div class="article-card-content">
+                                <span class="article-category-tag">Nouveautés Proxatek</span>
+                                <h3 class="article-title">Nouveau : Découvrez notre service de supervision proactive 24/7 !</h3>
+                                <p class="article-excerpt">Anticipez les pannes et optimisez la disponibilité de vos systèmes.</p>
+                                <div class="article-card-footer">
+                                    <span class="article-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 20 Février 2024</span>
+                                    <span class="learn-more-inline">Lire la suite <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!-- Article 4 -->
+                        <article class="article-card product-like-card" data-category="productivite">
+                        <a href="actualites/article-teletravail-securise.html" class="article-card-link">
+                            <div class="article-card-image">
+                                <img src="img/blog/article-teletravail.jpg" alt="Personne travaillant à distance sur un ordinateur portable" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250/2F1C6A/FFFFFF?text=Télétravail'">
+                            </div>
+                            <div class="article-card-content">
+                                <span class="article-category-tag">Productivité</span>
+                                <h3 class="article-title">Télétravail sécurisé : Les bonnes pratiques pour votre PME</h3>
+                                <p class="article-excerpt">Maintenez productivité et sécurité avec vos équipes à distance.</p>
+                                <div class="article-card-footer">
+                                    <span class="article-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 10 Février 2024</span>
+                                    <span class="learn-more-inline">Lire la suite <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <nav class="pagination-proxatek" aria-label="Pagination des articles">
+                    <ul>
+                        <li><a href="#" class="prev disabled" aria-label="Page précédente" aria-disabled="true"><i class="fas fa-chevron-left" aria-hidden="true"></i></a></li>
+                        <li><a href="#" class="page-number active" aria-current="page">1</a></li>
+                        <li><a href="#" class="page-number">2</a></li>
+                        <li><a href="#" class="page-number">3</a></li>
+                        <li><span class="dots">...</span></li>
+                        <li><a href="#" class="page-number">8</a></li>
+                        <li><a href="#" class="next" aria-label="Page suivante"><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <section class="section-padding section-bg-accent-gradient newsletter-cta-section">
+            <div class="container text-center">
+                <h2 style="color: var(--custom-text-light);">Restez à la Pointe de l'IT !</h2>
+                <p style="color: rgba(255,255,255,0.9); max-width:600px; margin: 0 auto 30px auto;">Abonnez-vous à notre newsletter mensuelle pour recevoir nos derniers articles, conseils et offres spéciales directement dans votre boîte mail.</p>
+                <form class="newsletter-form">
+                    <input type="email" name="email_newsletter" placeholder="Votre adresse e-mail" required aria-label="Adresse e-mail pour la newsletter">
+                    <button type="submit" class="btn btn-white-outline-on-dark">S'abonner</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer copié de index.html -->
+    <footer class="site-footer-proxatek">
+        <div class="container footer-grid-proxatek">
+            <div class="footer-col footer-col-about">
+                <a href="index.html" title="Accueil Proxatek - Solutions IT pour PME">
+                    <img src="img/proxatek-logo-principal-blanc.png" alt="Proxatek Logo Blanc - Solutions IT pour PME" class="footer-logo-img" onerror="this.style.display='none'; this.onerror=null; document.getElementById('logoFooterTextFallbackActualites').style.display='block';" loading="lazy">
+                    <span id="logoFooterTextFallbackActualites" class="logo-text-fallback" style="display:none; color:var(--custom-text-light-primary); margin-bottom:15px; font-size:22px; font-weight:bold;">PROXATEK</span>
+                </a>
+                <p data-i18n="footer.about.description">Proxatek, votre partenaire informatique de confiance. Nous aidons les PME à exploiter le plein potentiel de la technologie.</p>
+                <div class="social-media-links">
+                    <a href="#" aria-label="LinkedIn Proxatek" title="LinkedIn Proxatek"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Facebook Proxatek" title="Facebook Proxatek"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Twitter Proxatek" title="Twitter Proxatek"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.explore.title">Explorer</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="footer.explore.home">Accueil</a></li>
+                    <li><a href="index.html#prestations-proxatek" data-i18n="footer.explore.services">Nos Prestations</a></li>
+                    <li><a href="index.html#pourquoi-proxatek" data-i18n="footer.explore.whyUs">Pourquoi Nous ?</a></li>
+                    <li><a href="a-propos.html" data-i18n="footer.explore.aboutUs">Qui sommes-nous ?</a></li>
+                    <li><a href="questionnaire.html" data-i18n="footer.explore.quoteSimulator">Simulateur de Devis</a></li>
+                    <li><a href="actualites.html" data-i18n="footer.explore.newsBlog" class="active">Actualités & Blog</a></li>
+                    <li><a href="partenariat.html" data-i18n="footer.explore.partnership">Devenir Partenaire</a></li>
+                    <li><a href="contact.html" data-i18n="footer.explore.contact">Contact</a></li>
+                </ul>
+            </div>
+             <div class="footer-col">
+                <h4 data-i18n="footer.keyServices.title">Services Clés</h4>
+                <ul>
+                    <li><a href="services/infogerance.html" data-i18n="services.infogerance.title">Infogérance & Maintenance</a></li>
+                    <li><a href="services/cybersecurite.html" data-i18n="services.cybersecurity.title">Cybersécurité & Sauvegarde</a></li>
+                    <li><a href="services/cloud.html" data-i18n="services.cloud.title">Solutions Cloud</a></li>
+                    <li><a href="services/reseau.html" data-i18n="services.network.title">Réseau & Infrastructure</a></li>
+                    <li><a href="services/audit.html" data-i18n="services.audit.title">Audit & Conseil</a></li>
+                    <li><a href="services/materiel.html" data-i18n="services.hardware.title">Matériel Informatique</a></li>
+                    <li><a href="services/supervision.html" data-i18n="services.supervision.title">Supervision Proactive</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-contact">
+                <h4 data-i18n="footer.contactUs.title">Nous Contacter</h4>
+                <address>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="footer.contact.address">123 Avenue de la Tech<br>75000 Paris, France</span></p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+33412345678" data-i18n="footer.contact.phone">04 12 34 56 78</a></p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@proxatek.fr" data-i18n="footer.contact.email">contact@proxatek.fr</a></p>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom-proxatek">
+            <p>© <span class="current-year-proxatek"></span> <span data-i18n="footer.copyrightText">Proxatek SAS. Tous droits réservés.</span> | <a href="mentions-legales.html" data-i18n="footer.legalNotices">Mentions Légales</a> | <a href="politique-confidentialite.html" data-i18n="footer.privacyPolicy">Confidentialité</a></p>
+        </div>
+    </footer>
+
+    <a href="contact.html?urgence=true" class="floating-help-btn-proxatek" aria-label="Contacter Proxatek pour un support urgent">
+        <i class="fas fa-headset" aria-hidden="true"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filters-actualites .filter-btn');
+            const articles = document.querySelectorAll('.articles-grid .article-card');
+
+            if (filterButtons.length > 0 && articles.length > 0) {
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+
+                        const filter = this.getAttribute('data-filter');
+
+                        articles.forEach(article => {
+                            article.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                            article.style.transform = 'scale(0.95)';
+                            article.style.opacity = '0';
+
+                            setTimeout(() => {
+                                if (filter === 'all' || article.getAttribute('data-category') === filter) {
+                                    article.style.display = '';
+                                    article.style.transform = 'scale(1)';
+                                    article.style.opacity = '1';
+                                } else {
+                                    article.style.display = 'none';
+                                }
+                            }, 300);
+                        });
+                    });
+                });
+            }
+
+            const paginationLinks = document.querySelectorAll('.pagination-proxatek a.page-number');
+            if (paginationLinks.length > 0) {
+                paginationLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        document.querySelectorAll('.pagination-proxatek a.page-number.active').forEach(activeLink => activeLink.classList.remove('active'));
+                        this.classList.add('active');
+                        console.log('Charger la page d\'articles : ' + this.textContent);
+                    });
+                });
+            }
+
+            const yearSpan = document.querySelector('.current-year-proxatek');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+            // Script pour le menu mobile (si vous avez copié le header de index.html)
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle-custom');
+            const mobileNavMenu = document.getElementById('mobileNavMenuUniversal'); // Assurez-vous que cet ID est présent dans votre header copié
+            const iconOpen = mobileMenuToggle ? mobileMenuToggle.querySelector('.icon-open') : null;
+            const iconClose = mobileMenuToggle ? mobileMenuToggle.querySelector('.icon-close') : null;
+
+            if (mobileMenuToggle && mobileNavMenu && iconOpen && iconClose) {
+                mobileMenuToggle.addEventListener('click', function () {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    mobileNavMenu.classList.toggle('active');
+                    
+                    if (mobileNavMenu.classList.contains('active')) {
+                        iconOpen.style.display = 'none';
+                        iconClose.style.display = 'inline';
+                        // Optionnel : désactiver le scroll du body quand le menu est ouvert
+                        // document.body.style.overflow = 'hidden';
+                    } else {
+                        iconOpen.style.display = 'inline';
+                        iconClose.style.display = 'none';
+                        // Optionnel : réactiver le scroll du body
+                        // document.body.style.overflow = '';
+                    }
+                });
+                // Fermer le menu si un lien est cliqué (pour les ancres ou navigations SPA)
+                mobileNavMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (mobileNavMenu.classList.contains('active')) {
+                            mobileMenuToggle.click(); // Simule un clic sur le burger pour fermer
+                        }
+                    });
+                });
+            }
+            // Newsletter form in CTA section (simulation)
+            const newsletterFormCta = document.querySelector('.newsletter-cta-section .newsletter-form');
+            if (newsletterFormCta) {
+                newsletterFormCta.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const emailInput = newsletterFormCta.querySelector('input[name="email_newsletter"]');
+                    if (emailInput && emailInput.value) {
+                        alert('Merci pour votre inscription à la newsletter : ' + emailInput.value + ' (CTA Simulation)');
+                        emailInput.value = ''; // Clear input after submission
+                    } else {
+                        alert('Veuillez entrer une adresse e-mail valide. (CTA Simulation)');
+                    }
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>

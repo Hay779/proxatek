@@ -1,0 +1,197 @@
+/* contact-page.css */
+
+/* Styles spécifiques pour la section Hero de la page contact */
+.hero-contact {
+    background-color: var(--custom-bg-lavender-mist); /* Ou une autre couleur/image de fond */
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.hero-contact h1 {
+    color: var(--custom-primary-dark);
+    margin-bottom: 15px;
+}
+
+/* Grille principale pour le contenu de la page contact */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Formulaire plus large que la colonne d'infos */
+    gap: 40px; /* Espace entre les colonnes */
+}
+
+/* Styles pour la colonne du formulaire */
+.contact-form-column h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem; /* Ajustez si besoin */
+    color: var(--custom-text-dark-primary);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--custom-text-dark-primary);
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--custom-border-light);
+    border-radius: var(--custom-border-radius-cards); /* Ou var(--custom-border-radius-buttons) si vous préférez */
+    font-family: var(--custom-font-family);
+    font-size: 0.95rem;
+    background-color: var(--custom-bg-white);
+    color: var(--custom-text-medium-gray);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--custom-primary-dark);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(var(--custom-primary-dark-rgb, 47, 26, 75), 0.2); /* Définir --custom-primary-dark-rgb */
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group .checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--custom-text-medium-gray);
+    font-weight: 400;
+}
+.form-group .checkbox-label input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto; /* Pour que le style par défaut s'applique mieux */
+    accent-color: var(--custom-accent-magenta); /* Pour colorer la coche */
+}
+.form-group .checkbox-label a {
+    color: var(--custom-accent-magenta);
+    text-decoration: underline;
+}
+
+
+/* Styles pour la colonne d'informations de contact */
+.contact-info-column {
+    background-color: var(--custom-bg-lavender-mist); /* Fond légèrement différent pour la colonne */
+    padding: 30px;
+    border-radius: var(--custom-border-radius-cards);
+}
+
+.contact-info-block {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--custom-border-subtle-lavender);
+}
+.contact-info-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.contact-info-block h3 {
+    font-size: 1.3rem;
+    color: var(--custom-primary-dark);
+    margin-bottom: 15px;
+}
+
+.contact-info-block .btn-block { /* Pour que les boutons prennent toute la largeur */
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.contact-info-block .btn-block i {
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+
+.contact-info-block .phone-number-large {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--custom-accent-magenta);
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+.contact-info-block .phone-number-large:hover {
+    color: var(--custom-accent-magenta-hover);
+}
+
+.contact-info-block .availability-note {
+    font-size: 0.85rem;
+    color: var(--custom-text-medium-gray);
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.contact-info-block p {
+    color: var(--custom-text-medium-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.contact-info-block p .icon-left {
+    margin-right: 8px;
+    color: var(--custom-primary-dark);
+    width: 16px; /* Pour alignement */
+}
+.contact-info-block p strong {
+    color: var(--custom-text-dark-primary);
+    font-weight: 500;
+}
+.contact-info-block p a {
+    color: var(--custom-accent-magenta);
+}
+.contact-info-block p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive pour la grille de contact */
+@media (max-width: 991px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur tablette et mobile */
+    }
+    .contact-info-column {
+        margin-top: 40px; /* Espace si les colonnes s'empilent */
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-form-column h2 {
+        font-size: 1.6rem;
+    }
+    .contact-info-block h3 {
+        font-size: 1.2rem;
+    }
+    .contact-info-column {
+        padding: 20px;
+    }
+}
+
+/* Ajoutez ceci dans votre style.css principal si ce n'est pas déjà fait,
+   pour que les RGB soient disponibles pour le box-shadow des focus */
+/*
+:root {
+    --custom-primary-dark-rgb: 47, 26, 75; // Correspond à #2F1A4B mais sans le #
+}
+*/

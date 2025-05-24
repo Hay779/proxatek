@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez Proxatek - Solutions IT pour PME</title>
+    <meta name="description" content="Contactez Proxatek pour discuter de vos besoins IT, obtenir un devis, planifier un rendez-vous ou pour toute demande d'assistance.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="icon" href="img/Logoproxatek.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css"> <!-- Utilisation du style.css principal -->
+    <link rel="stylesheet" href="contact-page.css"> <!-- Un nouveau CSS pour les styles spécifiques à la page contact -->
+
+</head>
+<body>
+
+    <!-- ===== Blocs de Navigation (Header + Services Nav) ===== -->
+    <!-- Vous pouvez copier/coller ici exactement les mêmes blocs header -->
+    <!-- et <nav class="services-navigation-bar"> que sur index.html -->
+    <!-- pour la cohérence de la navigation sur tout le site. -->
+    <!-- Je vais mettre un placeholder pour l'instant -->
+    <header class="site-header-custom">
+        <!-- Contenu du header copié de index.html -->
+    </header>
+    <nav class="services-navigation-bar" aria-label="Navigation des services principaux">
+        <!-- Contenu de la barre de navigation des services copié de index.html -->
+    </nav>
+    <!-- ===== FIN Blocs de Navigation ===== -->
+
+    <main>
+        <section class="hero-section-custom hero-contact">
+            <div class="container">
+                <h1 data-i18n="contactPage.hero.title">Contactez-Nous</h1>
+                <p class="section-subtitle-custom" data-i18n="contactPage.hero.subtitle">Notre équipe est à votre écoute pour répondre à toutes vos questions et vous accompagner dans vos projets informatiques.</p>
+            </div>
+        </section>
+
+        <section class="contact-content-section section-padding">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Colonne Gauche: Formulaire de Contact -->
+                    <div class="contact-form-column">
+                        <h2 data-i18n="contactPage.form.title">Envoyez-nous un message</h2>
+                        <form id="contactForm" action="VOTRE_ENDPOINT_DE_TRAITEMENT_FORMULAIRE" method="POST">
+                            <div class="form-group">
+                                <label for="nom" data-i18n="contactPage.form.nameLabel">Nom complet</label>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="contactPage.form.emailLabel">Adresse e-mail</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone" data-i18n="contactPage.form.phoneLabel">Téléphone (Optionnel)</label>
+                                <input type="tel" id="telephone" name="telephone">
+                            </div>
+                            <div class="form-group">
+                                <label for="sujet" data-i18n="contactPage.form.subjectLabel">Sujet de votre demande</label>
+                                <input type="text" id="sujet" name="sujet" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service" data-i18n="contactPage.form.serviceLabel">Objet de votre demande</label> <!-- Label modifié pour mieux correspondre aux options -->
+                                <select id="service" name="demande_objet"> <!-- 'name' modifié pour mieux refléter le contenu si vous le souhaitez -->
+                                    <option value="" data-i18n="contactPage.form.reasonOptionDefault">-- Sélectionner un motif --</option>
+                                    <option value="info_generale" data-i18n="contactPage.form.reasonInfo">Demande d'information générale</option>
+                                    <option value="devis" data-i18n="contactPage.form.reasonQuote">Demande de devis</option>
+                                    <option value="rdv_expert" data-i18n="contactPage.form.reasonAppointment">Prise de Rendez-vous Expert</option>
+                                    <option value="support_urgent" data-i18n="contactPage.form.reasonSupport">Support Urgent</option>
+                                    <option value="partenariat" data-i18n="contactPage.form.reasonPartnership">Demande de partenariat</option>
+                                    <option value="autre" data-i18n="contactPage.form.reasonOther">Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-i18n="contactPage.form.messageLabel">Votre message</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <!-- Optionnel: Captcha ou case à cocher RGPD -->
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="rgpd" required>
+                                    <span data-i18n="contactPage.form.rgpdConsent">J'accepte que mes données soient traitées conformément à la <a href="politique-confidentialite.html" target="_blank">politique de confidentialité</a>.</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom btn-large" data-i18n="contactPage.form.submitButton">Envoyer le message</button>
+                        </form>
+                    </div>
+
+                    <!-- Colonne Droite: Informations de Contact et RDV -->
+                    <aside class="contact-info-column">
+                        <div class="contact-info-block">
+                            <h3 data-i18n="contactPage.appointment.title">Prenez rendez-vous avec un expert</h3>
+                            <a href="URL_DE_VOTRE_OUTIL_DE_PLANIFICATION_RDV" class="btn btn-accent-custom btn-block" target="_blank" data-i18n="contactPage.appointment.scheduleButton">
+                                <i class="fas fa-calendar-alt"></i> Planifier un RDV
+                            </a>
+                            <p class="availability-note" data-i18n="contactPage.appointment.availabilityNote">Via notre outil de planification en ligne.</p>
+                        </div>
+
+                        <div class="contact-info-block">
+                            <h3 data-i18n="contactPage.chat.title">Chattez avec nous</h3>
+                            <button type="button" id="openChatButton" class="btn btn-secondary-custom btn-block">
+                                <i class="fas fa-comments"></i> Depuis notre site
+                            </button>
+                            <p class="availability-note" data-i18n="contactPage.chat.availabilityNote">Du lundi au vendredi de 9h à 17h (icône en bas à droite)</p>
+                        </div>
+
+                        <div class="contact-info-block">
+                            <h3 data-i18n="contactPage.callUs.title">Appelez-nous au</h3>
+                            <a href="tel:0800873232" class="phone-number-large">0 800 873 232</a>
+                            <p class="availability-note" data-i18n="contactPage.callUs.availabilityNote">Du lundi au samedi de 8h à 20h</p>
+                        </div>
+                        
+                        <div class="contact-info-block">
+                            <h3 data-i18n="contactPage.coordinates.title">Nos Coordonnées</h3>
+                            <p><i class="fas fa-map-marker-alt icon-left"></i> <strong data-i18n="contactPage.coordinates.addressLabel">Adresse :</strong><br>123 Avenue de la Tech<br>75000 Paris, France</p>
+                            <p><i class="fas fa-envelope icon-left"></i> <strong data-i18n="contactPage.coordinates.emailLabel">E-mail Général :</strong><br><a href="mailto:contact@proxatek.fr">contact@proxatek.fr</a></p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <!-- Vous pouvez copier/coller ici exactement le même bloc footer -->
+    <!-- que sur index.html pour la cohérence. -->
+    <!-- Je vais mettre un placeholder pour l'instant -->
+    <footer class="site-footer-proxatek">
+        <!-- Contenu du footer copié de index.html -->
+    </footer>
+    <!-- ===== FIN Footer ===== -->
+
+    <!-- Potentiellement, votre bouton flottant de chat/aide si géré globalement -->
+    <!-- <a href="contact.html?urgence=true" class="floating-help-btn-proxatek">...</a> -->
+
+    <script>
+        // Script pour le menu mobile (identique à index.html)
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle-custom');
+            const mobileNavMenu = document.getElementById('mobileNavMenuUniversal');
+            const iconOpen = mobileMenuToggle ? mobileMenuToggle.querySelector('.icon-open') : null;
+            const iconClose = mobileMenuToggle ? mobileMenuToggle.querySelector('.icon-close') : null;
+
+            if (mobileMenuToggle && mobileNavMenu && iconOpen && iconClose) {
+                // ... (copiez la logique du menu mobile de index.html ici)
+            }
+
+            const yearSpan = document.querySelector('.current-year-proxatek'); // S'il est dans le footer copié
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+            // Logique pour le bouton "Chattez avec nous" s'il ouvre un widget
+            const openChatButton = document.getElementById('openChatButton');
+            if (openChatButton) {
+                openChatButton.addEventListener('click', function() {
+                    // Ici, intégrez le code pour ouvrir votre widget de chat
+                    // Par exemple, si vous avez un widget comme Tawk.to, Crisp, etc.
+                    // Tawk_API.maximize(); // Exemple pour Tawk.to
+                    alert("Le widget de chat devrait s'ouvrir ici !");
+                });
+            }
+
+            // Validation du formulaire (exemple simple, à améliorer)
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    // Empêche l'envoi standard pour le moment
+                    event.preventDefault(); 
+                    
+                    // TODO: Ajoutez une validation plus robuste des champs ici
+                    // avant de réellement soumettre les données via AJAX ou de laisser l'action POST standard.
+                    
+                    alert("Formulaire soumis (simulation) ! N'oubliez pas de configurer l'action du formulaire et le traitement côté serveur.");
+                    // this.submit(); // Décommentez pour un envoi de formulaire standard (nécessite une action POST configurée)
+                });
+            }
+        });
+    </script>
+</body>
+</html>

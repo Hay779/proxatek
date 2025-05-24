@@ -1,0 +1,622 @@
+/* questionnaire_standalone.css */
+
+/* ==========================================================================
+   VARIABLES (Extraites de :root)
+   ========================================================================== */
+:root {
+    --custom-purple-dark: #1A0B3D;
+    --custom-purple-primary: #2F1C6A;
+    --custom-magenta-accent: #D9006C;
+    --custom-pink-highlight: #FF33A1;
+    --custom-lavender-bg: #F6F3FF;
+    --custom-light-grey-bg: #F9F8FF; /* Utilisé potentiellement par des éléments hérités */
+    --custom-text-light: #ffffff;
+    --custom-text-primary: #1E0E4B;
+    --custom-text-secondary: #5A5178;
+    --custom-border-color: #E5D9FF;
+    --custom-card-action-bg: #ffffff;
+
+    --font-main: 'Inter', 'Nunito Sans', Arial, sans-serif;
+    --gradient-accent-proxatek: linear-gradient(135deg, var(--custom-magenta-accent) 0%, var(--custom-pink-highlight) 100%);
+    --custom-purple-primary-rgb: 47, 28, 106; /* Pour box-shadow sur boutons */
+
+    --container-width: 1170px; 
+    --card-border-radius: 12px;
+    --shadow-light: 0 4px 15px rgba(47, 28, 106, 0.07); 
+    --shadow-medium: 0 8px 25px rgba(47, 28, 106, 0.12);
+    --shadow-strong: 0 10px 30px rgba(47, 28, 106, 0.15);
+
+    /* Variables de spacing pour le questionnaire */
+    --gap-xs: 0.25rem; /* 4px */
+    --gap-sm: 0.5rem;  /* 8px */
+    --gap-md: 1rem;    /* 16px */
+    --gap-lg: 1.5rem;  /* 24px */
+    --gap-xl: 2rem;    /* 32px */
+}
+
+/* Styles de base minimaux pour le fonctionnement du questionnaire */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { 
+    font-family: var(--font-main); 
+    color: var(--custom-text-primary); 
+    background-color: var(--custom-lavender-bg); 
+    line-height: 1.7; 
+    font-size: 16px; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+}
+.container { 
+    width: 90%; 
+    max-width: var(--container-width); 
+    margin: 0 auto; 
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+
+/* Styles des boutons (utilisés par #backBtn et les boutons de formulaire) */
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; font-weight: 600; text-align: center; border-radius: var(--card-border-radius); transition: all 0.25s ease; cursor: pointer; border: none; font-size: 0.95rem; line-height: 1.5; text-transform: none;}
+.btn i, .btn svg { margin-left: 8px; font-size:0.9em;}
+.btn-outline { border: 1px solid var(--custom-border-color); color: var(--custom-purple-primary); background:var(--custom-text-light); box-shadow:none; font-family: var(--font-main); font-weight: 400;}
+.btn-outline:hover { background-color:var(--custom-lavender-bg); color:var(--custom-text-light); }
+.btn-small { padding: 8px 18px; font-size: 0.85rem; text-transform: none; box-shadow: none; }
+
+
+/* ==================== SECTION DIAGNOSTIC IT INLINE (pour la première étape stylisée si HTML statique) ==================== */
+.devis-question { 
+    text-align: center; 
+    font-size: 1.8rem; 
+    font-weight: 700; 
+    color: var(--custom-purple-dark); 
+    margin-bottom: 10px; 
+    margin-top: var(--gap-lg);
+}
+.subtitle-devis.subtitle { 
+    text-align: center; 
+    font-size: 1.1rem; 
+    color: var(--custom-text-secondary); 
+    margin-bottom: var(--gap-lg); 
+    min-height: 0; 
+    font-family: var(--font-main); /* Police des sous-titres */
+    font-weight: 400;             /* Poids des sous-titres */
+}
+.devis-options-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px; 
+    max-width: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.devis-option-card { 
+    display: block; 
+    flex-direction: column; 
+    background-color: var(--custom-card-action-bg); 
+    border-radius: var(--card-border-radius); 
+    box-shadow: var(--shadow-light); 
+    text-decoration: none; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+    overflow: hidden; 
+    border: 1px solid transparent; 
+    cursor: pointer;
+}
+.devis-option-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: var(--shadow-medium); 
+    border-color: var(--custom-magenta-accent);
+}
+.devis-option-image { 
+    width: 100%; 
+    height: 180px; 
+    background-color: var(--custom-lavender-bg); 
+    border-bottom: 1px solid var(--custom-border-color); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.devis-option-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+.devis-option-label { 
+    padding: 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.devis-option-label span:first-child { 
+    font-family: var(--font-main); /* Police des sous-titres pour le label aussi */
+    font-weight: 500; /* Un peu plus de poids pour le label de la carte */
+    color: var(--custom-text-primary); 
+    font-size: 1.05rem; 
+}
+.devis-option-label .arrow-icon { 
+    color: var(--custom-magenta-accent); 
+    font-size: 1.1rem; 
+    transition: transform 0.2s ease;
+}
+.devis-option-card:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================================================
+   STYLES POUR LE QUESTIONNAIRE DYNAMIQUE (questionnaire.html)
+   ========================================================================== */
+body.questionnaire-page-active {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.header-fullwidth-questionnaire {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  flex-shrink: 0;
+  background-color: var(--custom-text-light);
+  border-bottom: 1px solid var(--custom-border-color);
+}
+.header-questionnaire {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0; 
+}
+
+.logo-questionnaire a {
+  display: inline-block; /* Pour que le lien prenne la taille de son contenu */
+  line-height: 0; /* Évite un espace sous l'image si le lien est display:inline */
+}
+
+.logo-questionnaire img {
+  max-height: 45px; /* Hauteur max pour le logo sur desktop */
+  width: auto;
+  display: block; /* Évite l'espace sous l'image */
+}
+
+.logo-text-fallback-questionnaire {
+  display: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--custom-purple-primary); /* Ou la couleur que vous souhaitez pour le texte fallback */
+}
+
+/* Vous pourriez vouloir ajuster la hauteur du logo sur mobile si 45px est trop grand */
+@media (max-width: 850px) {
+  /* La balise <source> change déjà l'image, ici on peut ajuster la taille si besoin */
+  .logo-questionnaire img {
+    max-height: 35px; /* Exemple : plus petit sur mobile */
+  }
+}
+.promo-questionnaire {
+  background: var(--custom-purple-primary);
+  color: var(--custom-text-light);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+.promo-questionnaire strong {
+    color: var(--custom-pink-highlight);
+    font-weight: 700;
+}
+
+main.questionnaire-main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.questionnaire-navigation-wrapper.container {
+  padding-top: var(--gap-md, 1rem);
+  padding-bottom: 0;
+  min-height: 40px;
+  flex-shrink: 0;
+}
+#backBtn i {
+    margin-right: 6px; 
+    margin-left: 0; 
+}
+
+.progress-bar-wrapper-proxatek.container {
+  max-width: 700px;
+  margin-top: var(--gap-md, 1rem);
+  margin-bottom: var(--gap-lg, 1.5rem);
+  flex-shrink: 0;
+}
+.steps-proxatek {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    width: 100%;
+    padding: 0 5px;
+}
+.steps-proxatek .step-label {
+    flex: 1;
+    text-align: center;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    color: var(--custom-text-secondary);
+    padding-bottom: 8px;
+    position: relative;
+    font-weight: 500;
+}
+.steps-proxatek .step-label.current {
+    color: var(--custom-purple-primary);
+    font-weight: 700;
+}
+.steps-proxatek .step-label.current::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 3px;
+    background-color: var(--custom-magenta-accent);
+    border-radius: 3px;
+}
+.progress-bar-proxatek {
+    position: relative;
+    width: 100%;
+    height: 0.8rem;
+    background-color: var(--custom-border-color);
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+.progress-fill-proxatek {
+    position: absolute;
+    top: 0; left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--gradient-accent-proxatek);
+    transition: width 0.4s ease-in-out;
+    border-radius: var(--card-border-radius); 
+}
+
+#question-container.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0; 
+  padding-bottom: var(--gap-lg, 2rem);
+}
+
+.questionnaire-page-active .question-section.active {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  animation: fadeIn 0.3s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.questionnaire-page-active .question-section .question {
+  text-align: center;
+  font-size: clamp(1.5rem, 3.5vw, 1.9rem);
+  color: var(--custom-purple-dark);
+  margin-top: 5vh; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--gap-sm, 0.5rem);
+  font-weight: 700;
+  line-height: 1.3;
+  max-width: 800px;
+  flex-shrink: 0;
+}
+
+.questionnaire-page-active .question-section .subtitle {
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--custom-text-secondary);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--gap-xl, 2rem); 
+  max-width: 700px;
+  line-height: 1.6;
+  min-height: 1.6em; 
+  flex-shrink: 0;
+  font-family: var(--font-main);
+  font-weight: 400; /* Style de police des sous-titres */
+}
+.questionnaire-page-active .question-section .subtitle:empty {
+    min-height: 0;
+    margin-bottom: var(--gap-md, 1rem); 
+}
+
+
+.questionnaire-page-active .choices,
+.questionnaire-page-active .form-input-group {
+  margin-bottom: var(--gap-sm, 0.5rem);
+  flex-shrink: 0;
+}
+.questionnaire-page-active .choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.questionnaire-page-active .choice {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 18px 22px;
+  font-family: var(--font-main); /* Police comme sous-titre */
+  font-weight: 400;             /* Poids comme sous-titre (normal) */
+  font-size: 1rem;              /* Taille adaptée pour bouton */
+  text-align: left;
+  border-radius: var(--card-border-radius);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  line-height: 1.4;
+  background-color: var(--custom-text-light); 
+  color: var(--custom-purple-primary);       
+  border: 1px solid var(--custom-border-color); 
+  box-shadow: 0 2px 8px rgba(var(--custom-purple-primary-rgb), 0.08); /* Ombre très légère */
+}
+
+.questionnaire-page-active .choice:hover {
+  background-color: var(--custom-lavender-bg); 
+  border-color: var(--custom-purple-primary); 
+  color: var(--custom-purple-dark);         
+  transform: translateY(-2px); 
+  box-shadow: var(--shadow-light); 
+}
+
+.questionnaire-page-active .choice i { 
+  margin-right: 12px;
+  font-size: 1.4rem;
+  color: var(--custom-purple-primary); 
+  width: 25px;
+  text-align: center;
+  transition: color 0.25s ease;
+  font-style: normal; 
+}
+
+.questionnaire-page-active .choice:hover i {
+  color: var(--custom-magenta-accent); 
+}
+
+.questionnaire-page-active .form-input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.questionnaire-page-active .input-field {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 15px;
+  border: 1px solid var(--custom-border-color);
+  border-radius: var(--card-border-radius);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  text-align: left;
+  background-color: var(--custom-text-light);
+  color: var(--custom-text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.questionnaire-page-active .input-field::placeholder {
+  color: var(--custom-text-secondary);
+  opacity: 0.7;
+}
+.questionnaire-page-active .input-field:focus {
+  border-color: var(--custom-purple-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--custom-purple-primary-rgb), 0.2);
+}
+
+.questionnaire-page-active .input-button { 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 24px;
+  font-family: var(--font-main); /* Police comme sous-titre */
+  font-weight: 400;             /* Poids comme sous-titre (normal) */
+  font-size: 1rem;              /* Taille adaptée */
+  text-align: center;
+  border-radius: var(--card-border-radius);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  line-height: 1.5;
+  text-transform: none;
+  background-color: var(--custom-text-light);     
+  color: var(--custom-purple-primary);         
+  border: 1px solid var(--custom-border-color);  
+  box-shadow: none; 
+}
+.questionnaire-page-active .input-button:hover {
+  background-color: var(--custom-lavender-bg);  
+  color: var(--custom-purple-dark);           
+  border-color: var(--custom-purple-dark);    
+}
+
+.questionnaire-page-active .error-message {
+  color: var(--custom-magenta-accent);
+  text-align: left;
+  font-size: 0.85rem;
+  margin-top: -10px; 
+  margin-bottom: 15px; 
+  display: none; 
+  width: 100%;
+}
+.questionnaire-page-active .confirmation-box {
+  max-width: 700px;
+  margin: var(--gap-xl, 2rem) auto; 
+  padding: var(--gap-lg, 2rem) var(--gap-xl, 2rem); 
+  text-align: center;
+  background: var(--custom-card-action-bg);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--shadow-medium);
+}
+.questionnaire-page-active .confirmation-box h1 {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  color: var(--custom-purple-dark);
+  margin-bottom: var(--gap-md, 1rem);
+}
+.questionnaire-page-active .confirmation-box p {
+  font-size: 1.1rem;
+  color: var(--custom-text-secondary);
+  margin-bottom: var(--gap-md, 1rem);
+  line-height: 1.7;
+}
+.questionnaire-page-active .confirmation-box .highlight {
+  color: var(--custom-magenta-accent);
+  font-weight: 700;
+}
+.questionnaire-page-active .confirmation-icon i.fa-check-circle { 
+    color: var(--custom-magenta-accent);
+    font-size: 3rem; 
+    margin-bottom: var(--gap-md, 1rem);
+}
+.questionnaire-page-active .code-offre {
+  background: var(--gradient-accent-proxatek);
+  color: var(--custom-text-light);
+  padding: 10px 25px;
+  border-radius: 50px; 
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: inline-block;
+  margin: var(--gap-md, 1rem) 0 var(--gap-lg, 1.5rem);
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-light);
+}
+.questionnaire-page-active #smsForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--gap-md, 1rem);
+  gap: var(--gap-md, 1rem); 
+}
+.questionnaire-page-active #smsPhone { 
+  max-width: 320px;
+  text-align: center;
+  width: 100%;
+  padding: 14px 18px; 
+  margin-bottom: 0; 
+}
+.questionnaire-page-active #smsButton {
+  max-width: 320px;
+  width: 100%;
+  padding: 12px 24px;
+  font-family: var(--font-main); /* Police comme sous-titre */
+  font-weight: 400;             /* Poids comme sous-titre (normal) */
+  font-size: 1rem;              /* Taille adaptée */
+  /* Le reste des styles (background, border, color) est hérité de .input-button ou surchargé ci-dessous */
+  background-color: var(--custom-text-light);     
+  color: var(--custom-purple-primary);         
+  border: 1px solid var(--custom-border-color);  
+  box-shadow: none; 
+}
+.questionnaire-page-active #smsButton:hover {
+  background-color: var(--custom-lavender-bg);
+  color: var(--custom-purple-dark);
+  border-color: var(--custom-purple-dark);
+}
+.questionnaire-page-active #smsButton:disabled {
+  background-color: #f0f0f0; 
+  color: #a0a0a0;             
+  border-color: #d0d0d0;      
+  opacity: 0.7; 
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Responsive spécifique au questionnaire */
+@media (max-width: 768px) {
+  .progress-bar-wrapper-proxatek.container {
+      padding-left: 20px; 
+      padding-right: 20px;
+  }
+  .devis-question { font-size: 1.6rem; }
+  .subtitle-devis.subtitle { font-size: 1rem; }
+}
+
+@media (max-width: 600px) {
+  .questionnaire-page-active .header-questionnaire {
+    flex-direction: column;
+    gap: var(--gap-sm, 0.5rem);
+    padding: var(--gap-md, 1rem); 
+  }
+  .questionnaire-page-active .promo-questionnaire {
+    width: 100%;
+    max-width: 320px; 
+    font-size: 0.85rem;
+  }
+  .questionnaire-page-active .logo-questionnaire img {
+    max-height: 35px;
+  }
+  .questionnaire-page-active .questionnaire-navigation-wrapper #backBtn {
+    display: none !important; 
+  }
+  .questionnaire-page-active .questionnaire-navigation-wrapper.container {
+      min-height: 0;
+      padding-top: var(--gap-sm, 0.5rem);
+  }
+  .questionnaire-page-active .question-section .question,
+  .devis-question { 
+    font-size: 1.4rem;
+    margin-top: 3vh;
+  }
+  .questionnaire-page-active .question-section .subtitle,
+  .subtitle-devis.subtitle { 
+    font-size: 0.95rem;
+    min-height: auto; 
+    margin-bottom: var(--gap-lg);
+  }
+  .questionnaire-page-active .choices,
+  .devis-options-grid { 
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+  .questionnaire-page-active .choice,
+  .questionnaire-page-active .input-field,
+  .questionnaire-page-active .input-button { 
+    font-size: 0.95rem; /* Uniformisation pour mobile */
+  }
+  .questionnaire-page-active .devis-option-label span:first-child { font-size: 1rem; } 
+
+  .questionnaire-page-active .confirmation-box h1 {
+      font-size: 1.6rem;
+  }
+  .questionnaire-page-active .confirmation-box p {
+      font-size: 1rem;
+  }
+  .questionnaire-page-active .code-offre {
+      font-size: 1.2rem;
+      padding: 8px 20px;
+  }
+  .steps-proxatek .step-label {
+      font-size: 0.75rem; 
+  }
+}
+
+@media (max-height: 700px) and (max-width: 600px) { 
+    #question-container.container {
+        justify-content: flex-start; 
+        padding-bottom: var(--gap-md);
+    }
+    .questionnaire-page-active .question-section .question,
+    .devis-question {
+        margin-top: var(--gap-md); 
+    }
+}

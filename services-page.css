@@ -1,0 +1,1178 @@
+/* services-page.css */
+/* Styles spécifiques pour TOUTES les pages de service (hub et individuelles) */
+
+/* Styles pour le Hero de la page de service générique */
+.hero-service { 
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--custom-bg-lavender-mist); 
+}
+.hero-service.text-center { /* Pour centrer tout le contenu du hero si besoin */
+    text-align: center;
+}
+.hero-service .breadcrumb-service {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-align: left; /* S'assurer que le breadcrumb est à gauche même si le hero est centré */
+}
+.hero-service .breadcrumb-service a {
+    color: var(--custom-purple-primary);
+}
+.hero-service .breadcrumb-service .current-service {
+    color: var(--custom-text-primary);
+}
+.hero-service h1 {
+    color: var(--custom-purple-dark);
+}
+.hero-service .highlight-text-service {
+    color: var(--custom-magenta-accent);
+}
+.hero-service .hero-subtitle-service {
+    color: var(--custom-text-secondary);
+    max-width: 800px;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 10px;
+}
+.hero-service .btn { 
+    margin-top: 25px;
+}
+
+
+/* --- Styles pour la PAGE HUB DES SERVICES (services/services.html) --- */
+#all-services-listing .section-title-custom { }
+#all-services-listing .section-subtitle-custom { }
+
+.services-hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+.service-hub-card {
+    background-color: var(--custom-bg-white);
+    border-radius: var(--custom-border-radius-cards);
+    box-shadow: var(--custom-box-shadow-soft);
+    transition: var(--custom-transition);
+    border: 1px solid var(--custom-border-subtle-lavender);
+    display: flex; 
+}
+.service-hub-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--custom-box-shadow-soft-hover);
+    border-color: var(--custom-primary-dark);
+}
+.service-hub-card-link {
+    text-decoration: none;
+    color: var(--custom-text-dark-primary);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+.service-hub-card-icon {
+    font-size: 2.5rem; 
+    color: var(--custom-primary-dark);
+    margin-bottom: 18px;
+    text-align: center; 
+}
+.service-hub-card-icon i { 
+    display: inline-block;
+    width: 50px; 
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--custom-bg-lavender-mist); 
+}
+.service-hub-card h3 { 
+    font-size: 1.3rem; 
+    margin-bottom: 10px;
+    color: var(--custom-text-dark-primary);
+}
+.service-hub-card p { 
+    font-size: 0.9rem;
+    color: var(--custom-text-medium-gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+.learn-more-arrow {
+    font-weight: 600;
+    color: var(--custom-primary-dark);
+    font-size: 0.9rem;
+    align-self: flex-start; 
+    margin-top: auto; 
+}
+.learn-more-arrow i {
+    margin-left: 5px;
+    transition: transform 0.2s ease-out;
+}
+.service-hub-card-link:hover .learn-more-arrow i {
+    transform: translateX(4px);
+}
+.service-hub-card-link:hover .learn-more-arrow {
+    color: var(--custom-accent-magenta);
+}
+
+@media (min-width: 992px) { 
+    .services-hub-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .services-hub-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#services-cta .section-title-custom { }
+#services-cta .section-subtitle-custom { }
+#services-cta .btn { }
+/* --- FIN Styles pour la PAGE HUB DES SERVICES --- */
+
+
+/* --- STYLES COMMUNS AUX PAGES DE SERVICE INDIVIDUELLES (ex: audit.html) --- */
+.service-content-section { 
+    padding-top: 60px; 
+    padding-bottom: 60px;
+}
+.service-content-section .section-title-left-custom { /* Pour "Pourquoi réaliser un audit" */
+    /* Hérite de style.css */
+}
+
+.service-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+    .service-content-grid {
+        grid-template-columns: 1fr 1fr; 
+    }
+    .service-content-grid.alternate-layout .service-image-content {
+        order: -1; 
+    }
+}
+.service-image-content img {
+    border-radius: var(--custom-border-radius-cards);
+    box-shadow: var(--custom-box-shadow-soft);
+    width: 100%;
+    height: auto; 
+    max-height: 400px; 
+    object-fit: cover; 
+}
+.service-text-content h2 { 
+    font-size: 1.9rem; 
+    margin-bottom: 15px;
+}
+.service-text-content p {
+    font-size: 0.95rem; 
+    margin-bottom: 1em;
+}
+.service-text-content ul.custom-list-style {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.2em; 
+}
+.service-text-content ul.custom-list-style li {
+    display: flex;
+    align-items: flex-start; 
+    margin-bottom: 0.8em; 
+    color: var(--custom-text-medium-gray); 
+    font-size: 0.95rem; 
+    line-height: 1.6;
+}
+.service-text-content ul.custom-list-style li i.fas { 
+    color: var(--custom-accent-magenta); 
+    margin-right: 10px;
+    font-size: 1em; 
+    margin-top: 4px; 
+    width: 18px; 
+    flex-shrink: 0; 
+}
+.service-text-content ul.custom-list-style li strong { 
+    font-weight: 600; 
+    color: var(--custom-text-dark-primary);
+    margin-right: 0.3em;
+}
+
+.related-services-section {} 
+.related-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+.related-service-card {
+    display: block;
+    background-color: var(--custom-bg-white);
+    padding: 25px;
+    border-radius: var(--custom-border-radius-cards);
+    text-align: center;
+    box-shadow: var(--custom-box-shadow-soft);
+    transition: var(--custom-transition);
+    text-decoration: none;
+    color: var(--custom-text-dark-primary);
+    border: 1px solid var(--custom-border-subtle-lavender);
+}
+.related-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--custom-box-shadow-soft-hover);
+    border-color: var(--custom-primary-dark);
+}
+.related-service-card i {
+    font-size: 2rem;
+    color: var(--custom-accent-magenta);
+    margin-bottom: 15px;
+    display: block;
+}
+.related-service-card h4 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+.related-service-card p {
+    font-size: 0.85rem;
+    color: var(--custom-text-medium-gray);
+    margin-bottom: 0;
+}
+/* --- FIN Styles communs --- */
+
+
+/* --- STYLES SPÉCIFIQUES À LA PAGE AUDIT (services/audit.html) --- */
+
+/* Section Introduction audit (Pourquoi + Bénéfices) */
+#audit-introduction .audit-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 30px; 
+    align-items: flex-start; 
+}
+#audit-introduction .audit-intro-why .section-title-left-custom { /* Style pour le h2 "Pourquoi..." */
+    /* Hérite de .section-title-left-custom et des styles h2 généraux */
+}
+#audit-introduction .audit-intro-benefits h3 { /* Style pour "Un Audit Proxatek vous apporte" */
+    /* Styles déjà inline dans le HTML, ou peuvent être définis ici */
+    /* font-size: 1.25rem; color: var(--custom-text-dark-primary); margin-bottom: 1em; */
+}
+#audit-introduction .audit-intro-benefits ul.custom-list-style {
+    margin-top: 0; 
+}
+@media (min-width: 992px) { /* Utiliser 992px pour desktop pour la grille 2 colonnes */
+    #audit-introduction .audit-intro-grid {
+        grid-template-columns: 1.2fr 1fr; 
+    }
+    #audit-introduction .audit-intro-why,
+    #audit-introduction .audit-intro-benefits {
+        text-align: left; /* Assurer l'alignement à gauche pour les deux colonnes */
+    }
+    #audit-introduction .audit-intro-benefits ul.custom-list-style {
+        margin-left: 0; 
+    }
+}
+
+
+/* Section "Notre Méthodologie d'Audit en 4 Étapes Clés" */
+.audit-process-detailed.section-bg-light { }
+
+.audit-process-detailed .section-title-custom {
+    margin-bottom: 10px; 
+}
+.audit-process-detailed .section-subtitle-custom {
+    margin-bottom: 40px; 
+}
+.audit-process-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 25px; 
+    margin-top: 40px; 
+}
+.audit-step-detailed-card {
+    background-color: var(--custom-bg-white); 
+    border-radius: var(--custom-border-radius-cards);
+    box-shadow: var(--custom-box-shadow-soft); 
+    padding: 25px 20px; 
+    display: flex;
+    flex-direction: column; 
+    text-align: center; 
+    gap: 15px; 
+    border-left: 4px solid var(--custom-purple-primary); 
+}
+.audit-step-detailed-card:nth-child(even) {
+    border-left-color: var(--custom-magenta-accent);
+}
+.audit-step-identifier {
+    flex-shrink: 0;
+    text-align: center;
+    margin-bottom: 10px; 
+}
+.audit-step-detailed-number {
+    display: block;
+    font-size: 1.6rem; 
+    font-weight: 800;
+    color: var(--custom-purple-primary);
+    margin-bottom: 8px;
+    line-height: 1;
+}
+.audit-step-detailed-card:nth-child(even) .audit-step-detailed-number {
+    color: var(--custom-magenta-accent);
+}
+.audit-step-detailed-icon i { 
+    font-size: 2.2rem; 
+    color: var(--custom-text-secondary); 
+}
+.audit-step-detailed-content {
+    flex-grow: 1;
+    text-align: left; 
+}
+.audit-step-detailed-content h3 {
+    font-size: 1.2rem; 
+    color: var(--custom-text-dark-primary); 
+    margin-top: 0;
+    margin-bottom: 5px; 
+    font-weight: 700;
+}
+.audit-step-detailed-content .step-subtitle {
+    font-size: 0.9rem; 
+    font-weight: 600;
+    color: var(--custom-text-secondary);
+    margin-bottom: 10px; 
+    display: block;
+    font-style: italic;
+}
+.audit-step-detailed-content p {
+    margin-bottom: 12px; 
+    line-height: 1.6; 
+    font-size: 0.88rem; 
+    color: var(--custom-text-medium-gray); 
+}
+.audit-step-detailed-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    text-align: left; 
+}
+.audit-step-detailed-content ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px; 
+    font-size: 0.85rem; 
+    color: var(--custom-text-medium-gray); 
+}
+.audit-step-detailed-content ul li i.fas.fa-check { 
+    color: var(--custom-accent-magenta); 
+    margin-right: 8px; 
+    margin-top: 3px; 
+    font-size: 0.8em; 
+    width: 15px; 
+    text-align: center;
+    flex-shrink: 0; 
+}
+
+@media (min-width: 576px) { 
+    .audit-step-detailed-card {
+        flex-direction: row; 
+        text-align: left;
+        gap: 20px; 
+    }
+    .audit-step-identifier {
+        text-align: center; 
+        width: 80px; 
+        margin-bottom: 0;
+    }
+     .audit-step-detailed-icon i {
+        font-size: 2.5rem; 
+    }
+    .audit-step-detailed-content {
+        text-align: left;
+    }
+     .audit-step-detailed-content h3 {
+        font-size: 1.3rem;
+    }
+}
+@media (min-width: 992px) { 
+    .audit-process-grid {
+        grid-template-columns: 1fr; 
+        max-width: 850px; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+     .audit-step-detailed-content h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Section "Réalisez des économies" */
+.audit-savings-section { }
+.audit-savings-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--custom-bg-lavender-mist);
+    padding: 30px;
+    border-radius: var(--custom-border-radius-cards);
+    border: 1px solid var(--custom-border-subtle-lavender);
+}
+.audit-savings-icon-wrapper {
+    margin-bottom: 20px;
+}
+.audit-savings-icon {
+    font-size: 3.5rem;
+    color: var(--custom-accent-magenta);
+}
+.audit-savings-text h3 {
+    font-size: 1.6rem;
+    color: var(--custom-primary-dark);
+    margin-bottom: 10px;
+}
+.audit-savings-text .highlight-percentage {
+    color: var(--custom-accent-magenta);
+    font-weight: 800;
+}
+.audit-savings-text p {
+    font-size: 0.95rem;
+    color: var(--custom-text-medium-gray);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .audit-savings-content {
+        flex-direction: row;
+        text-align: left;
+        gap: 30px;
+    }
+    .audit-savings-icon-wrapper {
+        margin-bottom: 0;
+        margin-right: 20px; 
+        flex-shrink: 0;
+    }
+}
+
+/* Section "Votre Rapport d'Audit" */
+.audit-report-highlight {
+    background-color: var(--custom-bg-white); 
+    color: var(--custom-text-dark-primary); 
+    padding: 30px;
+    border-radius: var(--custom-border-radius-cards);
+    text-align: center;
+    border: 1px solid var(--custom-border-subtle-lavender); 
+    box-shadow: var(--custom-box-shadow-soft);
+}
+.audit-report-highlight h3 {
+    color: var(--custom-primary-dark); 
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+.audit-report-highlight p {
+    color: var(--custom-text-medium-gray); 
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto 25px auto;
+}
+.audit-report-highlight .btn-primary-custom { 
+    background-color: var(--custom-accent-magenta); 
+    border-color: var(--custom-accent-magenta);
+    color: var(--custom-text-light-primary);
+}
+.audit-report-highlight .btn-primary-custom:hover {
+    background-color: var(--custom-accent-magenta-hover);
+    border-color: var(--custom-accent-magenta-hover);
+}
+
+/* Section "Pourquoi Choisir Proxatek" */
+/* Utilise .feature-list-custom de style.css, pas besoin de styles supplémentaires ici à moins de surcharges spécifiques */
+.service-content-section ul.feature-list-custom strong { /* Pour assurer le gras avec ** de markdown */
+    font-weight: 600; /* Ou 700 si vous préférez plus fort */
+}
+
+
+/* FAQ spécifique aux pages de service */
+.faq-service { 
+    max-width: 750px;
+    margin: 30px auto 0 auto;
+}
+.faq-service dt {
+    font-weight: 600;
+    color: var(--custom-text-dark-primary);
+    padding: 15px;
+    background-color: var(--custom-bg-lavender-mist);
+    border: 1px solid var(--custom-border-subtle-lavender);
+    border-radius: var(--custom-border-radius-cards);
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+.faq-service dt:hover {
+    background-color: #e9e4f5;
+}
+.faq-service dt::after { 
+    content: '\f078'; 
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-out;
+}
+.faq-service dt[aria-expanded="true"]::after {
+    transform: translateY(-50%) rotate(180deg); 
+}
+.faq-service dd {
+    padding: 15px 20px;
+    margin-bottom: 15px; 
+    border: 1px solid var(--custom-border-subtle-lavender);
+    border-top: none;
+    border-radius: 0 0 var(--custom-border-radius-cards) var(--custom-border-radius-cards);
+    background-color: var(--custom-bg-white);
+    font-size: 0.9rem;
+    color: var(--custom-text-medium-gray);
+    line-height: 1.7;
+}
+.faq-service dd[hidden] { 
+    display: none;
+}
+/* --- FIN Styles spécifiques à la PAGE AUDIT --- */
+/* services-page.css */
+
+/* ... (styles existants) ... */
+
+
+/* --- STYLES POUR LA SECTION "POURQUOI CHOISIR PROXATEK" (Page Audit) --- */
+#why-choose-proxatek-audit {
+    /* background-color: var(--custom-bg-light); est déjà sur la section */
+}
+
+#why-choose-proxatek-audit .section-title-custom {
+    /* Styles globaux s'appliquent */
+}
+#why-choose-proxatek-audit .section-subtitle-custom {
+    /* Styles globaux s'appliquent */
+    margin-bottom: 40px; /* Un peu plus d'espace avant la grille */
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.why-choose-card {
+    background-color: var(--custom-bg-white);
+    padding: 25px;
+    border-radius: var(--custom-border-radius-cards);
+    box-shadow: var(--custom-box-shadow-soft);
+    text-align: center;
+    border: 1px solid var(--custom-border-subtle-lavender);
+    transition: var(--custom-transition);
+}
+
+.why-choose-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--custom-box-shadow-soft-hover);
+    border-color: var(--custom-accent-magenta);
+}
+
+.why-choose-icon {
+    margin-bottom: 15px;
+}
+
+.why-choose-icon i {
+    font-size: 2.2rem; /* Taille des icônes */
+    color: var(--custom-primary-dark);
+    /* Pour un cercle autour de l'icône : */
+    /*
+    background-color: var(--custom-bg-lavender-mist);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    */
+}
+
+.why-choose-card h4 {
+    font-size: 1.15rem; /* Taille h4 globale */
+    color: var(--custom-text-dark-primary);
+    margin-bottom: 10px;
+}
+
+.why-choose-card p {
+    font-size: 0.9rem;
+    color: var(--custom-text-medium-gray);
+    line-height: 1.6;
+    margin-bottom: 0; /* Pas de marge en bas pour le dernier élément */
+}
+
+/* Responsive pour la grille "Pourquoi Choisir" */
+@media (min-width: 992px) { /* 3 colonnes sur desktop */
+    .why-choose-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 991.98px) { /* 2 colonnes sur tablette */
+    .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* En dessous de 600px, auto-fit devrait passer à 1 colonne */
+
+/* --- FIN Styles pour "POURQUOI CHOISIR PROXATEK" --- */
+
+
+/* ... (autres styles existants dans services-page.css, y compris les media queries générales à la fin) ... */
+
+
+
+/* --- MEDIA QUERIES POUR LES PAGES DE SERVICE (contenu de services-page.css) --- */
+@media (max-width: 991px) { 
+    .service-text-content h2 {
+        font-size: 1.7rem;
+    }
+    .audit-savings-text h3 {
+        font-size: 1.4rem;
+    }
+    .audit-report-highlight h3 {
+        font-size: 1.5rem;
+    }
+     .service-hub-card h3 { 
+        font-size: 1.25rem;
+    }
+    .audit-step-detailed-content h3 { 
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767px) { 
+    .hero-service {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .service-hub-card h3 {
+        font-size: 1.2rem; 
+    }
+    .service-hub-card p {
+        font-size: 0.85rem;
+    }
+     .service-hub-card-icon {
+        font-size: 2.2rem;
+    }
+    .service-text-content h2 {
+        font-size: 1.6rem;
+    }
+    .service-content-grid { 
+        gap: 20px;
+    }
+    .service-image-content img {
+        max-height: 300px; 
+    }
+    .services-preview-grid {
+        grid-template-columns: 1fr; 
+    }
+    .audit-step-detailed-card { 
+        padding: 20px;
+        flex-direction: column; /* Assurer que sur mobile ça s'empile */
+        text-align: center;     /* Centrer le contenu de la carte */
+    }
+    .audit-step-identifier {
+        margin-bottom: 15px; 
+        width: auto; /* Permettre à l'identifiant de se centrer */
+    }
+    .audit-step-detailed-number {
+        font-size: 1.6rem;
+    }
+    .audit-step-detailed-icon i {
+        font-size: 2rem; 
+    }
+    .audit-step-detailed-content {
+        text-align: center; /* Contenu textuel centré aussi sur mobile */
+    }
+    .audit-step-detailed-content h3 {
+        font-size: 1.15rem;
+    }
+    .audit-step-detailed-content ul {
+        display: inline-block; /* Pour centrer la liste */
+        text-align: left;     /* Mais garder le texte de la liste à gauche */
+    }
+    .audit-savings-content {
+        padding: 20px;
+    }
+    .audit-savings-text h3 {
+        font-size: 1.3rem;
+    }
+    .audit-report-highlight {
+        padding: 25px;
+    }
+    .audit-report-highlight h3 {
+        font-size: 1.4rem;
+    }
+    .faq-service dt {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    .faq-service dd {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+    }
+}
+/* services-page.css */
+/* Styles spécifiques pour TOUTES les pages de service (hub et individuelles) */
+
+/* ... (tous les styles existants pour .hero-service, .services-hub-grid, .service-content-grid, .audit-process-detailed, etc. restent ici) ... */
+
+
+/* ==========================================================================
+   STYLES POUR LA SECTION DES OFFRES (utilisée dans infogerance.html, etc.)
+   Basé sur styles_offers_section.css
+   ========================================================================== */
+
+.offers-section.service-content-section.section-bg-light {
+    background-color: var(--custom-lavender-bg); /* Couleur de fond pour la section des offres */
+}
+
+.offers-intro { 
+    text-align: center; 
+    max-width: 800px; 
+    margin: 0 auto 40px auto; 
+    color: var(--custom-text-secondary); 
+    font-size: 1.05rem; 
+    line-height: 1.7;
+}
+.offers-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 30px; 
+    align-items: stretch; /* Les cartes auront la même hauteur si le contenu le permet */
+}
+.offer-card { 
+    background-color: var(--custom-bg-white); /* --custom-card-action-bg */
+    border-radius: var(--custom-border-radius-cards); /* --card-border-radius */
+    box-shadow: var(--custom-box-shadow-soft); /* --shadow-light */
+    padding: 30px 25px; 
+    display: flex; 
+    flex-direction: column; 
+    text-align: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border: 2px solid transparent; 
+}
+.offer-card:hover { 
+    transform: translateY(-6px); 
+    box-shadow: var(--custom-box-shadow-soft-hover); /* --shadow-medium */
+}
+.offer-card.popular { 
+    border-color: var(--custom-magenta-accent); 
+    box-shadow: 0 10px 30px rgba(47, 26, 75, 0.15); /* --shadow-strong */
+    position: relative; 
+    transform: translateY(-10px); 
+}
+.offer-card.popular:hover { 
+    transform: translateY(-16px); 
+}
+.offer-card.popular::before { 
+    content: 'Le plus choisi'; 
+    position: absolute; 
+    top: 0px; 
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%); 
+    background: linear-gradient(135deg, var(--custom-magenta-accent) 0%, var(--custom-pink-highlight) 100%); /* --gradient-accent-proxatek */
+    color: var(--custom-text-light-primary); 
+    padding: 6px 15px; 
+    font-size: 0.8rem; 
+    font-weight: 700; 
+    border-radius: 20px; 
+    z-index: 10; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+}
+.offer-card .offer-icon { 
+    font-size: 2.8rem; 
+    color: var(--custom-purple-primary); 
+    margin-bottom: 20px; 
+}
+.offer-card.popular .offer-icon { 
+    color: var(--custom-magenta-accent); 
+}
+.offer-card h3 { /* Cible h3 dans .offer-card */
+    font-size: 1.8rem; 
+    font-weight: 700; 
+    color: var(--custom-text-dark-primary); /* --custom-purple-dark */
+    margin-bottom: 10px; 
+    margin-top: 0; 
+}
+.offer-card .offer-description { 
+    font-size: 0.95rem; 
+    color: var(--custom-text-medium-gray); /* --custom-text-secondary */
+    margin-bottom: 25px; 
+    min-height: 60px; /* Ajusté pour 2-3 lignes */
+    line-height: 1.6; 
+}
+.offer-card ul { 
+    list-style: none; 
+    padding-left: 0; 
+    margin-bottom: 30px; 
+    flex-grow: 1; 
+    text-align: left; 
+}
+.offer-card ul li { 
+    display: flex; 
+    align-items: flex-start; 
+    margin-bottom: 12px; 
+    font-size: 0.9rem; 
+    color: var(--custom-text-medium-gray); 
+}
+.offer-card ul li i.fas { /* Cibler les icônes FontAwesome */
+    color: var(--custom-magenta-accent); 
+    margin-right: 10px; 
+    margin-top: 0.2em; 
+    font-size: 1em; 
+    width: 18px; 
+    text-align: center; 
+    flex-shrink: 0; 
+}
+.offer-card ul li.not-included { 
+    color: #999; 
+}
+.offer-card ul li.not-included i.fas { 
+    color: #ccc; 
+}
+.offer-card .btn { /* Style du bouton dans la carte d'offre */
+    width: auto; 
+    padding: 12px 30px; 
+    margin: 20px auto 0 auto; /* Ajout de margin-top pour espacer de la liste */
+    display: inline-block; 
+}
+.offer-card .offer-details-summary { 
+    text-align: left; 
+    margin-top: 25px; /* Augmenté pour plus d'espace */
+    font-size: 0.85rem; 
+    padding-top: 20px; /* Augmenté */
+    border-top: 1px solid var(--custom-border-subtle-lavender); /* --custom-border-color */
+}
+.offer-card .offer-details-summary p { 
+    margin-bottom: 8px; /* Augmenté */
+    color: var(--custom-text-medium-gray); 
+}
+.offer-card .offer-details-summary strong { 
+    color: var(--custom-text-dark-primary); /* --custom-text-primary */
+}
+.offer-comparison-note { 
+    text-align: center; 
+    font-size: 0.95rem; 
+    color: var(--custom-text-secondary); 
+    margin-top: 50px; 
+}
+.offer-comparison-note a {
+    color: var(--custom-magenta-accent); /* Assurer la couleur du lien */
+    font-weight: 600;
+}
+
+
+/* Media Queries pour la section des offres */
+@media (max-width: 991px) {
+    .offer-card.popular { 
+        transform: translateY(0); 
+    }
+    .offer-card.popular:hover { 
+        transform: translateY(-6px); 
+    }
+     .offer-card .offer-description {
+        min-height: auto; /* Permettre à la description de prendre sa hauteur naturelle */
+    }
+}
+@media (max-width: 767px) {
+    .service-content-section h2 { /* S'applique au titre "Nos Offres d'Infogérance" */
+        font-size: 1.8rem; 
+    }
+    .offers-grid { 
+        grid-template-columns: 1fr; 
+    }
+    .offer-card { 
+        padding: 25px 20px; 
+    }
+    .offer-card.popular::before { 
+        font-size: 0.7rem; 
+        padding: 4px 10px; 
+    }
+    .offer-card h3 { /* Cible h3 dans .offer-card */
+        font-size: 1.5rem; 
+    }
+    .offer-card .offer-description {
+        min-height: auto; /* Laisser la hauteur s'adapter */
+    }
+}
+/* ==========================================================================
+   FIN STYLES POUR LA SECTION DES OFFRES
+   ========================================================================== */
+
+
+/* ... (vos autres styles existants pour .service-content-grid, .audit-process-detailed, FAQ, etc. restent ici) ... */
+/* ... (vos Media Queries générales pour les pages de service à la fin du fichier) ... */
+
+/* services-page.css */
+
+/* ... (tous les styles existants pour .hero-service, .services-hub-grid, .audit-process-detailed, .offers-section etc. restent ici) ... */
+
+
+/* ==========================================================================
+   STYLES POUR LA SECTION MATÉRIEL (services/materiel.html)
+   ========================================================================== */
+
+#materiel-offre .section-title-custom {
+    /* Styles globaux s'appliquent */
+}
+#materiel-offre .section-subtitle-custom {
+    margin-bottom: 40px; /* Plus d'espace avant la grille de matériel */
+}
+
+/* Utilisation de .offers-grid et .offer-card pour la section matériel, 
+   avec une classe modificatrice pour des ajustements si nécessaire. */
+.material-offer-grid {
+    /* Hérite de .offers-grid, peut être surchargé */
+    /* Exemple : si on veut 2 colonnes max même sur desktop pour ces cartes plus petites */
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+}
+@media (min-width: 992px) {
+    .material-offer-grid {
+         grid-template-columns: repeat(3, 1fr); /* Maintenir 3 colonnes si l'espace le permet */
+    }
+}
+
+
+.offer-card.material-card { /* Styles spécifiques pour les cartes de matériel si besoin */
+    /* background-color: var(--custom-bg-white); -- Hérité */
+    /* padding: 25px; -- Ajuster si différent des offres d'infogérance */
+    /* text-align: left; -- Si vous préférez un alignement à gauche pour le matériel */
+}
+.offer-card.material-card .offer-icon {
+    font-size: 2.5rem; /* Icônes un peu plus petites pour les cartes matériel */
+    margin-bottom: 15px;
+}
+.offer-card.material-card h3 {
+    font-size: 1.4rem; /* Titres un peu plus petits */
+    margin-bottom: 8px;
+}
+.offer-card.material-card .offer-description {
+    font-size: 0.9rem;
+    min-height: 50px; /* Hauteur min pour la description */
+    margin-bottom: 20px;
+}
+.offer-card.material-card ul {
+    margin-bottom: 25px; /* Espace avant le bouton */
+}
+.offer-card.material-card ul li {
+    font-size: 0.85rem; /* Texte de la liste un peu plus petit */
+    margin-bottom: 10px;
+}
+.offer-card.material-card .btn-outline { /* Style du bouton dans les cartes matériel */
+    width: 100%; /* Bouton pleine largeur dans la carte */
+    margin-top: auto; /* Pousse le bouton en bas */
+}
+
+
+/* Section "Nos Engagements" (utilise .why-choose-grid et .why-choose-card) */
+#materiel-engagement .section-title-custom {
+    /* Styles globaux s'appliquent */
+}
+#materiel-engagement .why-choose-grid {
+    /* Les styles de .why-choose-grid de la page audit s'appliquent */
+}
+#materiel-engagement .why-choose-card {
+    /* Les styles de .why-choose-card de la page audit s'appliquent */
+}
+#materiel-engagement .why-choose-icon i {
+    /* Ajuster la taille si besoin pour cette section */
+    /* font-size: 2rem; */
+}
+
+
+/* Section FAQ et Services Complémentaires utilisent les styles déjà définis dans services-page.css */
+/* #faq-materiel-section ... */
+/* .related-services-section ... */
+
+
+/* --- FIN Styles pour la SECTION MATÉRIEL --- */
+
+
+/* ... (vos Media Queries générales pour les pages de service à la fin du fichier) ... */
+/* Assurez-vous que les media queries pour .offer-card s'appliquent aussi bien à .material-card */
+
+@media (max-width: 767px) {
+    /* ... (autres styles responsives dans services-page.css) ... */
+
+    .offer-card.material-card h3 {
+        font-size: 1.3rem;
+    }
+    .offer-card.material-card .offer-description {
+        font-size: 0.85rem;
+    }
+}
+/* services-page.css */
+
+/* ... (tous les styles existants pour .hero-service, .services-hub-grid, .audit-process-detailed, .offers-section etc. restent ici) ... */
+
+
+/* ==========================================================================
+   STYLES POUR LA SECTION DES SOLUTIONS CLOUD (services/cloud.html)
+   ========================================================================== */
+
+#cloud-solutions-offre .section-title-custom {
+    /* Styles globaux s'appliquent */
+}
+#cloud-solutions-offre .section-subtitle-custom {
+    margin-bottom: 40px; 
+}
+
+/* Utilisation de .offers-grid et .offer-card pour la section Cloud, 
+   avec une classe modificatrice pour des ajustements si nécessaire. */
+.cloud-offer-grid {
+    /* Hérite de .offers-grid, peut être surchargé */
+    /* Par exemple, si vous voulez 2 colonnes max pour les offres cloud même sur desktop : */
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+}
+/* Pour assurer que les offres cloud s'affichent bien en 2 colonnes sur tablette et plus si pas surchargé */
+@media (min-width: 768px) {
+    .cloud-offer-grid {
+        /* Si .offers-grid est déjà repeat(auto-fit, minmax(320px, 1fr)), 
+           cela devrait déjà donner 2 colonnes ou plus.
+           Sinon, forcez 2 colonnes : */
+        /* grid-template-columns: repeat(2, 1fr); */
+    }
+}
+@media (min-width: 1200px) { /* Maintenir 3 colonnes sur très grands écrans si .offers-grid le permet */
+    .cloud-offer-grid {
+        /* grid-template-columns: repeat(3, 1fr); */
+    }
+}
+
+
+.offer-card.cloud-card { /* Styles spécifiques pour les cartes Cloud si besoin */
+    /* text-align: left; -- Si vous préférez un alignement à gauche */
+}
+.offer-card.cloud-card .offer-icon {
+    font-size: 2.6rem; /* Icônes légèrement ajustées pour les cartes cloud */
+    margin-bottom: 18px;
+}
+.offer-card.cloud-card h3 {
+    font-size: 1.5rem; /* Titres des solutions cloud */
+    margin-bottom: 10px;
+}
+.offer-card.cloud-card .offer-description {
+    font-size: 0.9rem;
+    min-height: 65px; /* Hauteur min pour la description, à ajuster */
+    margin-bottom: 20px;
+}
+.offer-card.cloud-card ul {
+    margin-bottom: 25px; 
+}
+.offer-card.cloud-card ul li {
+    font-size: 0.88rem; 
+    margin-bottom: 10px;
+}
+.offer-card.cloud-card .btn { 
+    width: 100%; 
+    margin-top: auto; 
+}
+/* Si une offre cloud est "populaire", les styles .popular s'appliqueront */
+
+
+/* Section "Les Avantages du Cloud avec Proxatek" (utilise .why-choose-grid et .why-choose-card) */
+#cloud-benefits-proxatek .section-title-custom {
+    /* Styles globaux s'appliquent */
+}
+#cloud-benefits-proxatek .why-choose-grid {
+    /* Les styles de .why-choose-grid de la page audit s'appliquent */
+}
+#cloud-benefits-proxatek .why-choose-card {
+    /* Les styles de .why-choose-card de la page audit s'appliquent */
+}
+#cloud-benefits-proxatek .why-choose-icon i {
+    /* Ajuster la taille si besoin pour cette section */
+    /* font-size: 2rem; */
+}
+
+
+/* --- FIN Styles pour la SECTION SOLUTIONS CLOUD --- */
+
+
+/* ... (vos autres styles existants et Media Queries générales pour les pages de service à la fin du fichier) ... */
+
+/* services-page.css */
+
+/* ... (tous les styles existants pour hero, hub, audit, offres, etc. restent ici) ... */
+
+
+/* ==========================================================================
+   STYLES POUR LA SECTION DES ÉLÉMENTS DE SUPERVISION (services/supervision.html)
+   ========================================================================== */
+#supervision-elements .section-title-custom {
+    /* Styles globaux s'appliquent */
+}
+#supervision-elements .section-subtitle-custom {
+    margin-bottom: 40px;
+}
+
+/* Utilisation de .offers-grid et .offer-card pour la section supervision, 
+   avec une classe modificatrice pour des ajustements si nécessaire. */
+.supervision-elements-grid {
+    /* Hérite de .offers-grid */
+}
+.offer-card.supervision-element-card { 
+    padding: 25px 20px; /* Un peu moins de padding vertical que les offres commerciales */
+    text-align: center; /* Centrer le contenu */
+    border-width: 1px; /* Bordure plus fine si pas .popular */
+}
+.offer-card.supervision-element-card .offer-icon {
+    font-size: 2.2rem; /* Icônes un peu plus petites */
+    margin-bottom: 15px;
+    color: var(--custom-accent-magenta); /* Couleur d'accent pour les icônes de supervision */
+}
+.offer-card.supervision-element-card h3 {
+    font-size: 1.25rem; /* Titres des éléments supervisés */
+    margin-bottom: 10px;
+    color: var(--custom-text-dark-primary);
+}
+.offer-card.supervision-element-card p.offer-description { /* Pas de ul/li pour cette section */
+    font-size: 0.88rem;
+    color: var(--custom-text-medium-gray);
+    min-height: 0; /* Pas de hauteur min pour la description ici */
+    margin-bottom: 0; /* Pas de marge en bas si c'est le dernier élément */
+    flex-grow: 0; /* Pas besoin de s'étirer */
+}
+/* Pas de bouton .btn ni de .offer-details-summary dans ces cartes spécifiques */
+
+/* S'assurer que la grille des éléments de supervision s'adapte bien */
+@media (min-width: 992px) {
+    .supervision-elements-grid {
+         grid-template-columns: repeat(3, 1fr); 
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .supervision-elements-grid {
+         grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+/* --- FIN Styles pour la SECTION ÉLÉMENTS DE SUPERVISION --- */
+
+
+/* --- MEDIA QUERIES GÉNÉRALES POUR LES PAGES DE SERVICE (déjà présentes à la fin de services-page.css) --- */
+/* ... (vos Media Queries existantes pour .hero-service, .service-text-content h2, .service-hub-card etc.) ... */
+
+/* Assurez-vous d'ajouter des ajustements pour .supervision-element-card si nécessaire dans les media queries existantes */
+@media (max-width: 767px) { 
+    /* ... */
+    .offer-card.supervision-element-card h3 {
+        font-size: 1.15rem;
+    }
+    .offer-card.supervision-element-card .offer-icon {
+        font-size: 2rem;
+    }
+    /* ... */
+}

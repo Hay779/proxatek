@@ -1,0 +1,391 @@
+/* solutions-page.css */
+/* Styles spécifiques pour la section Solutions par Métier */
+
+/* --- STYLES POUR LE HERO DES PAGES SOLUTIONS (HUB ET INDIVIDUELLES) --- */
+.hero-solutions-hub, /* Pour la page hub /solutions/index.html */
+.hero-metier { /* Pour les pages de solution individuelle */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--custom-bg-lavender-mist); 
+}
+.hero-solutions-hub .container,
+.hero-metier .container {
+    text-align: left; /* Aligner le texte à gauche par défaut pour ces héros */
+}
+
+.hero-solutions-hub .breadcrumb-service, /* Pour la page hub */
+.breadcrumb-metier { /* Pour les pages de solution individuelle */
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+.hero-solutions-hub .breadcrumb-service a,
+.breadcrumb-metier a {
+    color: var(--custom-purple-primary);
+}
+.hero-solutions-hub .breadcrumb-service .current-service,
+.breadcrumb-metier .current-metier {
+    color: var(--custom-text-primary);
+}
+
+.hero-solutions-hub h1,
+.hero-metier h1 {
+    color: var(--custom-purple-dark);
+    font-size: 2.5rem; /* Ajuster si besoin */
+    margin-bottom: 10px;
+}
+.hero-solutions-hub .highlight-text, /* Classe générique pour highlight */
+.highlight-text-metier { /* Classe spécifique si besoin d'override */
+    color: var(--custom-magenta-accent);
+}
+.hero-solutions-hub .lead, /* Pour la page hub */
+.hero-subtitle-metier { /* Pour les pages de solution individuelle */
+    color: var(--custom-text-secondary);
+    max-width: 800px;
+    margin-top: 10px;
+    font-size: 1.05rem; /* Ajuster si besoin */
+    margin-bottom: 20px; /* Espace avant le bouton si présent */
+}
+.hero-metier .btn { 
+    margin-top: 25px;
+}
+
+/* --- STYLES POUR LA PAGE HUB DES SOLUTIONS (/solutions/index.html) --- */
+.solutions-metiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+.metier-card-link {
+    text-decoration: none;
+    display: flex; /* Pour que la carte prenne toute la hauteur si la grille a des hauteurs inégales */
+}
+.metier-card {
+    background-color: var(--custom-bg-white);
+    border-radius: var(--custom-border-radius-cards);
+    box-shadow: var(--custom-box-shadow-soft);
+    transition: var(--custom-transition);
+    border: 1px solid var(--custom-border-subtle-lavender);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Pour que la carte remplisse le lien */
+    color: var(--custom-text-dark-primary);
+}
+.metier-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--custom-box-shadow-soft-hover);
+    border-color: var(--custom-primary-dark);
+}
+.metier-card-icon {
+    font-size: 2.2rem; 
+    color: var(--custom-primary-dark); /* Couleur par défaut */
+    margin-bottom: 15px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--custom-bg-lavender-mist);
+    display: inline-block; /* Pour que le fond s'applique */
+}
+.metier-card-icon.icon-magenta { color: var(--custom-accent-magenta); }
+/* .metier-card-icon.icon-pink { color: var(--custom-pink-highlight); } Si vous avez cette variable */
+.metier-card-icon.icon-pink { color: #FF33A1; } /* Exemple avec une couleur rose */
+
+
+.metier-card h3 { 
+    font-size: 1.25rem; 
+    margin-bottom: 10px;
+    color: var(--custom-text-dark-primary);
+}
+.metier-card p { 
+    font-size: 0.9rem;
+    color: var(--custom-text-medium-gray);
+    line-height: 1.6;
+    margin-bottom: 0; 
+    flex-grow: 1; 
+}
+
+.cta-no-metier {
+    text-align: center;
+    /* background-color: var(--custom-bg-lavender-mist); -- Déjà appliqué par .section-bg-light */
+}
+.cta-no-metier h2 { /* Hérite de .section-title-custom */
+    margin-bottom: 15px;
+}
+.cta-no-metier p { /* Hérite de .section-subtitle-custom */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+/* --- STYLES COMMUNS AUX PAGES DE SOLUTIONS INDIVIDUELLES --- */
+.metier-content-section {
+    padding: 50px 0;
+}
+/* Styles pour les titres et sous-titres alignés à gauche dans ces sections */
+.metier-content-section .text-left.section-title-custom,
+.metier-content-section .text-left.section-subtitle-custom {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none; /* Permet au texte de prendre plus de largeur si besoin */
+}
+
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+.challenge-card {
+    background-color: var(--custom-bg-white);
+    padding: 25px;
+    border-radius: var(--custom-border-radius-cards);
+    box-shadow: var(--custom-box-shadow-soft);
+    border: 1px solid var(--custom-border-subtle-lavender);
+    text-align: center;
+    display: flex; /* Ajout pour alignement vertical si contenu de hauteur variable */
+    flex-direction: column; /* Ajout */
+}
+.challenge-icon {
+    font-size: 2rem;
+    color: var(--custom-accent-magenta);
+    margin-bottom: 15px;
+}
+.challenge-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+.challenge-card p {
+    font-size: 0.9rem;
+    color: var(--custom-text-medium-gray);
+    line-height: 1.6;
+    margin-bottom: 0;
+    flex-grow: 1; /* Ajout pour que les cartes de même ligne aient la même hauteur apparente */
+}
+
+.solution-detail {
+    margin-bottom: 20px; /* Espacement entre les blocs de solution */
+}
+.solution-detail:last-child hr {
+    display: none; /* Cacher le dernier HR si un bloc .solution-detail est le dernier */
+}
+.solution-detail h3 {
+    font-size: 1.4rem; 
+    color: var(--custom-primary-dark);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.solution-detail h3 i {
+    margin-right: 12px;
+    color: var(--custom-accent-magenta);
+    font-size: 1.3em; 
+    width: 30px; 
+    text-align: center;
+    flex-shrink: 0;
+}
+.solution-detail p {
+    font-size: 0.95rem;
+    margin-bottom: 1em;
+    color: var(--custom-text-medium-gray); /* Assurer la couleur du paragraphe */
+}
+.solution-detail ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.solution-detail ul li {
+    display: flex;
+    align-items: flex-start; 
+    margin-bottom: 0.7em; 
+    color: var(--custom-text-medium-gray); 
+    font-size: 0.9rem; 
+    line-height: 1.6;
+}
+.solution-detail ul li i.fas.fa-check { 
+    color: var(--custom-accent-magenta); 
+    margin-right: 10px;
+    font-size: 0.85em; 
+    margin-top: 5px; 
+    width: 16px; 
+    flex-shrink: 0; 
+}
+
+.case-study-metier {
+    background-color: var(--custom-bg-white);
+    padding: 25px 30px;
+    border-radius: var(--custom-border-radius-cards);
+    box-shadow: var(--custom-box-shadow-soft);
+    border: 1px solid var(--custom-border-subtle-lavender);
+    margin-top: 30px;
+}
+.case-study-metier blockquote {
+    color: var(--custom-text-medium-gray); 
+    margin-top: 15px; 
+    margin-bottom: 15px; 
+    border-left: 4px solid var(--custom-accent-magenta); 
+    padding-left: 20px; 
+    font-size: 0.95rem;
+    line-height: 1.75; 
+    font-style: italic; 
+}
+.case-study-metier .author {
+    font-weight: 600;
+    color: var(--custom-text-dark-primary);
+    text-align: right;
+    font-size: 0.9rem;
+    margin-top: 10px; /* Ajout pour espacement */
+}
+
+.metier-content-section .feature-list-custom {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.metier-content-section.section-bg-light .feature-list-custom { /* Si le titre est à gauche, la liste doit l'être aussi */
+    margin-left:0; 
+    margin-right:0;
+    max-width: none;
+}
+
+
+.faq-metier { 
+    max-width: 800px; 
+    margin: 30px auto 0 auto;
+}
+.faq-metier dt {
+    font-weight: 600;
+    color: var(--custom-text-dark-primary);
+    padding: 15px;
+    background-color: var(--custom-bg-lavender-mist); 
+    border: 1px solid var(--custom-border-subtle-lavender);
+    border-radius: var(--custom-border-radius-cards);
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+.metier-content-section.section-bg-light .faq-metier dt { 
+    background-color: var(--custom-bg-white); 
+}
+/* Cas où la section FAQ n'a PAS de fond clair */
+.metier-content-section:not(.section-bg-light) .faq-metier dt {
+    background-color: var(--custom-bg-lavender-mist);
+}
+.metier-content-section:not(.section-bg-light) .faq-metier dd {
+    background-color: var(--custom-bg-lavender-mist); /* Ou var(--custom-bg-white) si vous préférez */
+    border-top: 1px dashed var(--custom-border-light); /* Ligne de séparation plus douce */
+}
+
+
+.faq-metier dt:hover {
+    background-color: #e9e4f5; 
+}
+.faq-metier dt::after { 
+    content: '\f078'; 
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-out;
+}
+.faq-metier dt[aria-expanded="true"]::after {
+    transform: translateY(-50%) rotate(180deg); 
+}
+.faq-metier dd {
+    padding: 15px 20px;
+    margin-bottom: 15px; 
+    border: 1px solid var(--custom-border-subtle-lavender);
+    border-top: none;
+    border-radius: 0 0 var(--custom-border-radius-cards) var(--custom-border-radius-cards);
+    background-color: var(--custom-bg-white);
+    font-size: 0.9rem;
+    color: var(--custom-text-medium-gray);
+    line-height: 1.7;
+}
+.faq-metier dd[hidden] { 
+    display: none;
+}
+
+.cta-metier {
+    background-color: var(--custom-primary-dark);
+    color: var(--custom-text-light-primary);
+    padding: 60px 0;
+    text-align: center;
+}
+.cta-metier h2 { 
+    color: var(--custom-text-light-primary);
+    margin-bottom: 15px;
+}
+.cta-metier p { 
+    color: var(--custom-text-light-secondary);
+    max-width: 650px;
+    margin-left: auto; /* Pour centrer si .section-subtitle-custom n'est pas utilisé directement */
+    margin-right: auto; /* Pour centrer si .section-subtitle-custom n'est pas utilisé directement */
+    margin-bottom: 30px;
+}
+
+
+/* --- MEDIA QUERIES POUR LES PAGES SOLUTIONS --- */
+@media (max-width: 991px) { 
+    .hero-solutions-hub h1,
+    .hero-metier h1 {
+        font-size: 2.2rem;
+    }
+    .metier-card h3 {
+        font-size: 1.2rem;
+    }
+    .solution-detail h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 767px) { 
+    .hero-solutions-hub,
+    .hero-metier {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .hero-solutions-hub h1,
+    .hero-metier h1 {
+        font-size: 1.9rem;
+    }
+    .hero-solutions-hub .lead,
+    .hero-subtitle-metier {
+        font-size: 1rem;
+    }
+    .metier-content-section {
+        padding: 40px 0;
+    }
+    .challenges-grid {
+        grid-template-columns: 1fr; 
+    }
+    .challenge-card h3 {
+        font-size: 1.1rem;
+    }
+    .solution-detail h3 {
+        font-size: 1.25rem;
+    }
+    .solution-detail h3 i {
+        font-size: 1.2em;
+    }
+    .faq-metier dt {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    .faq-metier dd {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+    }
+    .cta-metier {
+        padding: 50px 0;
+    }
+}

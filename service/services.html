@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services IT - Proxatek</title>
+    <meta name="description" content="Découvrez l'ensemble des services informatiques proposés par Proxatek pour les PME : infogérance, cybersécurité, cloud, réseau, matériel et audit.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="icon" href="../img/Logoproxatek.png" type="image/png">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../services-page.css">
+
+</head>
+<body>
+
+    <header class="site-header-custom">
+        <div class="container header-custom-container">
+            <div class="logo-proxatek-custom">
+                <a href="../index.html" title="Accueil Proxatek - Solutions IT pour PME">
+                    <picture>
+                        <source media="(max-width:850px)" srcset="../img/logoP.png">
+                        <img src="../img/Logoproxatek.png" alt="Logo Proxatek - Solutions IT pour PME"
+                             onerror="this.style.display='none'; this.onerror=null; document.getElementById('logoTextFallbackHeaderServices').style.display='block';"
+                             loading="eager">
+                    </picture>
+                    <span id="logoTextFallbackHeaderServices" class="logo-text-fallback" style="display:none;">PROXATEK</span>
+                </a>
+            </div>
+            <nav class="main-nav-custom" aria-label="Navigation principale de bureau">
+            </nav>
+            <div class="header-actions-custom">
+                <a href="tel:+33412345678" class="phone-link-custom">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i> 04 12 34 56 78
+                </a>
+                <a href="../questionnaire.html" class="btn btn-primary-custom cta-header-desktop" data-i18n="nav.startQuote">Commencer votre devis</a>
+            </div>
+            <div class="header-actions-mobile-custom">
+                <a href="tel:+33412345678" class="phone-link-mobile-custom">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                    <span class="phone-text-mobile">04 12 34 56 78</span>
+                </a>
+                <a href="../questionnaire.html" class="btn btn-primary-custom btn-small cta-header-mobile" data-i18n="nav.startQuoteMobile">Devis</a>
+                <button class="mobile-menu-toggle-custom" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNavMenuUniversal">
+                    <i class="fas fa-bars icon-open" aria-hidden="true"></i>
+                    <i class="fas fa-times icon-close" aria-hidden="true" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="mobile-nav-custom" id="mobileNavMenuUniversal" aria-label="Menu de navigation mobile">
+            <a href="../index.html#prestations-proxatek" class="mobile-nav-main-link" data-i18n="mobileNav.ourServices">Nos Services</a>
+            <hr>
+            <a href="infogerance.html" data-i18n="services.infogerance.titleShort">Infogérance</a>
+            <a href="cybersecurite.html" data-i18n="services.cybersecurity.titleShort">Cybersécurité</a>
+            <a href="cloud.html" data-i18n="services.cloud.titleShort">Solutions Cloud</a>
+            <a href="reseau.html" data-i18n="services.network.titleShort">Réseau</a>
+            <a href="materiel.html" data-i18n="services.hardware.titleShort">Matériel</a>
+            <a href="audit.html" data-i18n="services.audit.titleShort">Audit & Conseil</a>
+            <hr>
+            <a href="../index.html#pourquoi-proxatek" data-i18n="mobileNav.whyUs">Pourquoi Nous ?</a>
+            <a href="../actualites.html" data-i18n="mobileNav.news">Actualités</a>
+            <a href="../a-propos.html" data-i18n="mobileNav.aboutUs">À Propos</a>
+            <a href="../partenariat.html" data-i18n="mobileNav.partnership">Partenariat</a>
+            <a href="../contact.html" data-i18n="mobileNav.contact">Contact</a>
+            <hr>
+            <a href="../questionnaire.html" class="btn btn-accent-custom mobile-nav-btn" data-i18n="mobileNav.quoteSimulator">Simulateur Devis Complet</a>
+            <a href="../contact.html?urgence=true" class="btn btn-secondary-custom mobile-nav-btn" data-i18n="mobileNav.urgentSupport">Support Urgent</a>
+        </nav>
+    </header>
+
+    <nav class="services-navigation-bar" aria-label="Navigation des services principaux">
+        <div class="container services-nav-container">
+            <ul>
+                <li><a href="infogerance.html"><i class="fas fa-cogs" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.infogerance.titleShort">Infogérance</span></a></li>
+                <li><a href="cybersecurite.html"><i class="fas fa-shield-virus" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.cybersecurity.titleShort">Cybersécurité</span></a></li>
+                <li><a href="cloud.html"><i class="fas fa-cloud" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.cloud.titleShort">Solutions Cloud</span></a></li>
+                <li><a href="reseau.html"><i class="fas fa-network-wired" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.network.titleShort">Réseau</span></a></li>
+                <li><a href="materiel.html"><i class="fas fa-laptop-code" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.hardware.titleShort">Matériel</span></a></li>
+                <li><a href="audit.html"><i class="fas fa-clipboard-check" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.audit.titleShort">Audit & Conseil</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-service" style="background-color: var(--custom-bg-lavender-mist);">
+            <div class="container">
+                <div class="breadcrumb-service" style="color: var(--custom-text-secondary);">
+                    <a href="../index.html" style="color: var(--custom-purple-primary);" data-i18n="breadcrumb.home">Accueil</a> > 
+                    <span class="current-service" style="color: var(--custom-text-primary);" data-i18n="breadcrumb.services">Nos Services</span>
+                </div>
+                <h1 style="color: var(--custom-purple-dark);" data-i18n="servicesPage.hero.title">L'Excellence IT au Service de <span class="highlight-text-service" style="color: var(--custom-magenta-accent);">votre Croissance</span></h1>
+                <p class="hero-subtitle-service" style="color: var(--custom-text-secondary); max-width: 800px;" data-i18n="servicesPage.hero.subtitle">Proxatek vous accompagne avec une gamme complète de solutions informatiques sur mesure, conçues pour optimiser votre productivité, sécuriser vos données et soutenir vos ambitions.</p>
+            </div>
+        </section>
+
+        <section id="all-services-listing" class="section-padding">
+            <div class="container">
+                <h2 class="section-title-custom" data-i18n="servicesPage.listing.title">Explorez Nos Domaines d'Expertise</h2>
+                <p class="section-subtitle-custom" data-i18n="servicesPage.listing.subtitle">Chaque service est pensé pour répondre aux défis spécifiques des PME et TPE, en alliant performance, sécurité et innovation.</p>
+                
+                <div class="services-hub-grid">
+                    <div class="service-hub-card">
+                        <a href="infogerance.html" class="service-hub-card-link">
+                            <div class="service-hub-card-icon"><i class="fas fa-cogs"></i></div>
+                            <h3 data-i18n="services.infogerance.title">Infogérance Proactive</h3>
+                            <p data-i18n="services.infogerance.shortDesc">Maintenance, support et supervision de votre parc informatique pour une sérénité totale.</p>
+                            <span class="learn-more-arrow" data-i18n="common.learnMore">Découvrir <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="service-hub-card">
+                        <a href="cybersecurite.html" class="service-hub-card-link">
+                            <div class="service-hub-card-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3 data-i18n="services.cybersecurity.title">Cybersécurité Avancée</h3>
+                            <p data-i18n="services.cybersecurity.shortDesc">Protégez vos actifs numériques contre les menaces avec nos solutions robustes et adaptées.</p>
+                            <span class="learn-more-arrow" data-i18n="common.learnMore">Découvrir <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="service-hub-card">
+                        <a href="cloud.html" class="service-hub-card-link">
+                            <div class="service-hub-card-icon"><i class="fas fa-cloud"></i></div>
+                            <h3 data-i18n="services.cloud.title">Solutions Cloud</h3>
+                            <p data-i18n="services.cloud.shortDesc">Flexibilité, collaboration et économies grâce à nos services cloud sur mesure (SaaS, IaaS, BaaS).</p>
+                            <span class="learn-more-arrow" data-i18n="common.learnMore">Découvrir <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="service-hub-card">
+                        <a href="reseau.html" class="service-hub-card-link">
+                            <div class="service-hub-card-icon"><i class="fas fa-network-wired"></i></div>
+                            <h3 data-i18n="services.network.title">Réseau & Télécoms</h3>
+                            <p data-i18n="services.network.shortDesc">Conception, installation et maintenance de réseaux performants et de téléphonie IP.</p>
+                            <span class="learn-more-arrow" data-i18n="common.learnMore">Découvrir <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="service-hub-card">
+                        <a href="materiel.html" class="service-hub-card-link">
+                            <div class="service-hub-card-icon"><i class="fas fa-laptop-code"></i></div>
+                            <h3 data-i18n="services.hardware.title">Matériel Informatique</h3>
+                            <p data-i18n="services.hardware.shortDesc">Fourniture et configuration de matériel adapté à vos besoins professionnels et budgétaires.</p>
+                            <span class="learn-more-arrow" data-i18n="common.learnMore">Découvrir <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="service-hub-card">
+                        <a href="audit.html" class="service-hub-card-link">
+                            <div class="service-hub-card-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <h3 data-i18n="services.audit.title">Audit & Conseil IT</h3>
+                            <p data-i18n="services.audit.shortDesc">Analysez votre infrastructure existante et obtenez des recommandations stratégiques.</p>
+                            <span class="learn-more-arrow" data-i18n="common.learnMore">Découvrir <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="service-hub-card">
+                        <a href="supervision.html" class="service-hub-card-link">
+                            <div class="service-hub-card-icon"><i class="fas fa-binoculars"></i></div>
+                            <h3 data-i18n="services.supervision.title">Supervision Proactive</h3>
+                            <p data-i18n="services.supervision.shortDesc">Monitoring 24/7 de votre SI pour anticiper et résoudre les incidents avant impact.</p>
+                            <span class="learn-more-arrow" data-i18n="common.learnMore">Découvrir <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services-cta" class="section-padding section-bg-light">
+            <div class="container text-center">
+                <h2 class="section-title-custom" data-i18n="servicesPage.cta.title">Besoin d'un Conseil Personnalisé ?</h2>
+                <p class="section-subtitle-custom" data-i18n="servicesPage.cta.subtitle">Notre équipe d'experts est à votre écoute pour analyser vos besoins spécifiques et vous orienter vers les solutions les plus adaptées à votre entreprise.</p>
+                <a href="../contact.html" class="btn btn-primary-custom btn-large" data-i18n="servicesPage.cta.button">Contactez-nous <i class="fas fa-comments"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer-proxatek">
+        <div class="container footer-grid-proxatek">
+            <div class="footer-col footer-col-about">
+                <a href="../index.html" title="Accueil Proxatek - Solutions IT pour PME">
+                    <img src="../img/proxatek-logo-principal-blanc.png" alt="Proxatek Logo Blanc - Solutions IT pour PME" class="footer-logo-img" onerror="this.style.display='none'; this.onerror=null; document.getElementById('logoFooterTextFallbackServices').style.display='block';" loading="lazy">
+                    <span id="logoFooterTextFallbackServices" class="logo-text-fallback" style="display:none; color:var(--custom-text-light-primary); margin-bottom:15px; font-size:22px; font-weight:bold;">PROXATEK</span>
+                </a>
+                <p data-i18n="footer.about.description">Proxatek, votre partenaire informatique de confiance. Nous aidons les PME à exploiter le plein potentiel de la technologie.</p>
+                <div class="social-media-links">
+                    <a href="#" aria-label="LinkedIn Proxatek" title="LinkedIn Proxatek"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Facebook Proxatek" title="Facebook Proxatek"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Twitter Proxatek" title="Twitter Proxatek"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.explore.title">Explorer</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="footer.explore.home">Accueil</a></li>
+                    <li><a href="services.html" data-i18n="footer.explore.services" class="active">Nos Prestations</a></li>
+                    <li><a href="../index.html#pourquoi-proxatek" data-i18n="footer.explore.whyUs">Pourquoi Nous ?</a></li>
+                    <li><a href="../a-propos.html" data-i18n="footer.explore.aboutUs">Qui sommes-nous ?</a></li>
+                    <li><a href="../questionnaire.html" data-i18n="footer.explore.quoteSimulator">Simulateur de Devis</a></li>
+                    <li><a href="../actualites.html" data-i18n="footer.explore.newsBlog">Actualités & Blog</a></li>
+                    <li><a href="../partenariat.html" data-i18n="footer.explore.partnership">Devenir Partenaire</a></li>
+                    <li><a href="../contact.html" data-i18n="footer.explore.contact">Contact</a></li>
+                </ul>
+            </div>
+             <div class="footer-col">
+                <h4 data-i18n="footer.keyServices.title">Services Clés</h4>
+                <ul>
+                    <li><a href="infogerance.html" data-i18n="services.infogerance.title">Infogérance & Maintenance</a></li>
+                    <li><a href="cybersecurite.html" data-i18n="services.cybersecurity.title">Cybersécurité & Sauvegarde</a></li>
+                    <li><a href="cloud.html" data-i18n="services.cloud.title">Solutions Cloud</a></li>
+                    <li><a href="reseau.html" data-i18n="services.network.title">Réseau & Infrastructure</a></li>
+                    <li><a href="audit.html" data-i18n="services.audit.title">Audit & Conseil</a></li>
+                    <li><a href="materiel.html" data-i18n="services.hardware.title">Matériel Informatique</a></li>
+                    <li><a href="supervision.html" data-i18n="services.supervision.title">Supervision Proactive</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-contact">
+                <h4 data-i18n="footer.contactUs.title">Nous Contacter</h4>
+                <address>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="footer.contact.address">123 Avenue de la Tech<br>75000 Paris, France</span></p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+33412345678" data-i18n="footer.contact.phone">04 12 34 56 78</a></p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@proxatek.fr" data-i18n="footer.contact.email">contact@proxatek.fr</a></p>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom-proxatek">
+            <p>© <span class="current-year-proxatek"></span> <span data-i18n="footer.copyrightText">Proxatek SAS. Tous droits réservés.</span> | <a href="../mentions-legales.html" data-i18n="footer.legalNotices">Mentions Légales</a> | <a href="../politique-confidentialite.html" data-i18n="footer.privacyPolicy">Confidentialité</a></p>
+        </div>
+    </footer>
+
+    <a href="../contact.html?urgence=true" class="floating-help-btn-proxatek" aria-label="Contacter Proxatek pour un support urgent">
+        <i class="fas fa-headset" aria-hidden="true"></i>
+    </a>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle-custom');
+        const mobileNavMenu = document.getElementById('mobileNavMenuUniversal');
+        const iconOpen = mobileMenuToggle ? mobileMenuToggle.querySelector('.icon-open') : null;
+        const iconClose = mobileMenuToggle ? mobileMenuToggle.querySelector('.icon-close') : null;
+
+        if (mobileMenuToggle && mobileNavMenu && iconOpen && iconClose) {
+            mobileMenuToggle.addEventListener('click', function () {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+                this.setAttribute('aria-expanded', !isExpanded);
+                mobileNavMenu.classList.toggle('active');
+                
+                if (mobileNavMenu.classList.contains('active')) {
+                    iconOpen.style.display = 'none';
+                    iconClose.style.display = 'inline';
+                } else {
+                    iconOpen.style.display = 'inline';
+                    iconClose.style.display = 'none';
+                }
+            });
+            mobileNavMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileNavMenu.classList.contains('active')) {
+                        mobileMenuToggle.click();
+                    }
+                });
+            });
+        }
+
+        const yearSpan = document.querySelector('.current-year-proxatek');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
+</script>
+</body>
+</html>

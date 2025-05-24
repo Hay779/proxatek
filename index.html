@@ -3,127 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page.title">Proxatek - Solutions IT Complètes & Audit pour PME</title>
+    <title data-i18n="page.title">Proxatek - Style Typo Hostinger / Couleurs Proxatek</title>
     <meta name="description" content="Proxatek : votre expert en solutions IT pour PME. Infogérance, cybersécurité, cloud, audit et matériel informatique. Obtenez un devis personnalisé et optimisez votre performance.">
 
-    <link rel="stylesheet" href="style.css"> <!-- CHEMIN RELATIF (si style.css est au même niveau que index.html) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="icon" href="img/Logoproxatek.png" type="image/png"> <!-- CHEMIN RELATIF (si img est un sous-dossier) & nom de fichier vérifié -->
+    <link rel="icon" href="img/Logoproxatek.png" type="image/png">
 
-    <link rel="canonical" href="https://www.proxatek.fr/"> <!-- URL absolue pour le domaine final -->
+    <link rel="canonical" href="https://www.proxatek.fr/">
 
     <meta property="og:title" content="Proxatek - Solutions IT Complètes & Audit pour PME">
     <meta property="og:description" content="Proxatek : votre expert en solutions IT pour PME. Infogérance, cybersécurité, cloud, audit et matériel informatique.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.proxatek.fr/"> <!-- URL absolue pour le domaine final -->
-    <meta property="og:image" content="https://www.proxatek.fr/img/proxatek-og-accueil.jpg"> <!-- URL absolue pour le domaine final -->
+    <meta property="og:url" content="https://www.proxatek.fr/">
+    <meta property="og:image" content="https://www.proxatek.fr/img/proxatek-og-accueil.jpg">
     <meta property="og:image:alt" content="Proxatek - Services Informatiques pour PME">
     <meta property="og:site_name" content="Proxatek">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-   <!-- ===== START: MAIN NAVIGATION BLOCK (HEADER + SERVICES NAV) ===== -->
-<header class="site-header-custom" role="banner">
-    <div class="container header-custom-container">
-        <div class="logo-proxatek-custom">
-            <a href="/index.html" title="Accueil Proxatek - Solutions IT pour PME"> 
-                <picture>
-                    <source media="(max-width:850px)" srcset="img/logoP.png"> 
-                    <img src="img/Logoproxatek.png"                          alt="Logo Proxatek - Solutions IT pour PME"
-                         onerror="this.style.display='none'; this.onerror=null; document.getElementById('logoTextFallbackHeader').style.display='block';"
-                         loading="eager">
-                </picture>
-                <span id="logoTextFallbackHeader" class="logo-text-fallback">PROXATEK</span>
-            </a>
+   <!-- ===== START:    <!-- ===== START: MAIN NAVIGATION BLOCK (HEADER + SERVICES NAV) ===== -->
+    <header class="site-header-custom">
+        <div class="container header-custom-container">
+            <div class="logo-proxatek-custom">
+                <a href="index.html" title="Accueil Proxatek - Solutions IT pour PME">
+                    <picture>
+                        <source media="(max-width:850px)" srcset="img/logoP.png">
+                        <img src="img/Logoproxatek.png" alt="Logo Proxatek - Solutions IT pour PME"
+                             onerror="this.style.display='none'; this.onerror=null; document.getElementById('logoTextFallbackHeader').style.display='block';"
+                             loading="eager">
+                    </picture>
+                    <span id="logoTextFallbackHeader" class="logo-text-fallback" style="display:none;">PROXATEK</span>
+                </a>
+            </div>
+            <nav class="main-nav-custom" aria-label="Navigation principale de bureau">
+                <!-- Liens de navigation principale desktop (si ajoutés) -->
+            </nav>
+    
+            <!-- Actions Header (Desktop et Mobile combinés/gérés par CSS) -->
+            <div class="header-actions-combined">
+                <a href="tel:+33412345678" class="phone-link-header"> <!-- Nouvelle classe pour le téléphone -->
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i> 
+                    <span class="phone-text-header">04 12 34 56 78</span>
+                </a>
+                <a href="questionnaire.html" class="btn btn-primary-custom cta-header-main" data-i18n="nav.startQuote">Commencer votre devis</a> <!-- Un seul bouton devis -->
+                
+                <button class="mobile-menu-toggle-custom" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNavMenuUniversal">
+                    <i class="fas fa-bars icon-open" aria-hidden="true"></i>
+                    <i class="fas fa-times icon-close" aria-hidden="true" style="display: none;"></i>
+                </button>
+            </div>
         </div>
-        <nav class="main-nav-custom" aria-label="Navigation principale de bureau">
-            <!-- Liens de navigation principale desktop (si ajoutés) -->
+    
+        <!-- Menu Mobile -->
+        <nav class="mobile-nav-custom" id="mobileNavMenuUniversal" aria-label="Menu de navigation mobile">
+            <!-- ... contenu du menu mobile inchangé ... -->
+            <a href="#prestations-proxatek" class="mobile-nav-main-link" data-i18n="mobileNav.ourServices">Nos Services</a>
+            <hr>
+            <a href="services/infogerance.html" data-i18n="services.infogerance.titleShort">Infogérance</a>
+            <a href="services/cybersecurite.html" data-i18n="services.cybersecurity.titleShort">Cybersécurité</a>
+            <a href="services/cloud.html" data-i18n="services.cloud.titleShort">Solutions Cloud</a>
+            <a href="services/reseau.html" data-i18n="services.network.titleShort">Réseau</a>
+            <a href="services/materiel.html" data-i18n="services.hardware.titleShort">Matériel</a>
+            <a href="services/audit.html" data-i18n="services.audit.titleShort">Audit & Conseil</a>
+            <hr>
+            <a href="#pourquoi-proxatek" data-i18n="mobileNav.whyUs">Pourquoi Nous ?</a>
+            <a href="actualites.html" data-i18n="mobileNav.news">Actualités</a>
+            <a href="a-propos.html" data-i18n="mobileNav.aboutUs">À Propos</a>
+            <a href="partenariat.html" data-i18n="mobileNav.partnership">Partenariat</a>
+            <a href="contact.html" data-i18n="mobileNav.contact">Contact</a>
+            <hr>
+            <a href="questionnaire.html" class="btn btn-accent-custom mobile-nav-btn" data-i18n="mobileNav.quoteSimulator">Simulateur Devis Complet</a>
+            <a href="support-urgent.html" class="btn btn-secondary-custom mobile-nav-btn" data-i18n="mobileNav.urgentSupport">Support Urgent</a>
         </nav>
-
-        <!-- Actions pour Desktop uniquement -->
-        <div class="header-actions-custom">
-            <a href="tel:+33412345678" class="phone-link-custom"> <!-- **NUMÉRO À REMPLACER** -->
-                <i class="fas fa-phone-alt" aria-hidden="true"></i> 04 12 34 56 78
-            </a>
-            <a href="/questionnaire.html" class="btn btn-primary-custom cta-header-desktop" data-i18n="nav.startQuote">Commencer votre devis</a> <!-- Lien vers la racine du site -->
+    </header>
+   
+    <nav class="services-navigation-bar" aria-label="Navigation des services principaux">
+        <div class="container services-nav-container">
+            <ul>
+                <li><a href="services/infogerance.html"><i class="fas fa-cogs" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.infogerance.titleShort">Infogérance</span></a></li>
+                <li><a href="services/cybersecurite.html"><i class="fas fa-shield-virus" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.cybersecurity.titleShort">Cybersécurité</span></a></li>
+                <li><a href="services/cloud.html"><i class="fas fa-cloud" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.cloud.titleShort">Solutions Cloud</span></a></li>
+                <li><a href="services/reseau.html"><i class="fas fa-network-wired" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.network.titleShort">Réseau</span></a></li>
+                <li><a href="services/materiel.html"><i class="fas fa-laptop-code" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.hardware.titleShort">Matériel</span></a></li>
+                <li><a href="services/audit.html"><i class="fas fa-clipboard-check" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.audit.titleShort">Audit & Conseil</span></a></li>
+            </ul>
         </div>
-
-        <!-- Actions pour Mobile/Tablette (Bouton Devis court + Burger) -->
-        <div class="header-actions-mobile-custom">
-            <a href="/questionnaire.html" class="btn btn-primary-custom btn-small cta-header-mobile" data-i18n="nav.startQuoteMobile">Devis</a> <!-- Lien vers la racine du site -->
-            <button class="mobile-menu-toggle-custom" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNavMenuUniversal">
-                <i class="fas fa-bars icon-open" aria-hidden="true"></i>
-                <i class="fas fa-times icon-close" aria-hidden="true"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- Menu Mobile -->
-    <div class="mobile-nav-custom" id="mobileNavMenuUniversal" aria-label="Menu de navigation mobile">
-        <a href="/#prestations-proxatek" class="mobile-nav-main-link" data-i18n="mobileNav.ourServices">Nos Services</a>
-        <hr role="separator">
-        <a href="/services/infogerance.html" data-i18n="services.infogerance.titleShort">Infogérance</a>
-        <a href="/services/cybersecurite.html" data-i18n="services.cybersecurity.titleShort">Cybersécurité</a>
-        <a href="/services/cloud.html" data-i18n="services.cloud.titleShort">Solutions Cloud</a>
-        <a href="/services/reseau.html" data-i18n="services.network.titleShort">Réseau</a>
-        <a href="/services/materiel.html" data-i18n="services.hardware.titleShort">Matériel</a>
-        <a href="/services/audit.html" data-i18n="services.audit.titleShort">Audit & Conseil</a>
-        <hr role="separator">
-        <a href="/#pourquoi-proxatek" data-i18n="mobileNav.whyUs">Pourquoi Nous ?</a>
-        <a href="/actualites.html" data-i18n="mobileNav.news">Actualités</a>
-        <a href="/a-propos.html" data-i18n="mobileNav.aboutUs">À Propos</a>
-        <a href="/partenariat.html" data-i18n="mobileNav.partnership">Partenariat</a>
-        <a href="/contact.html" data-i18n="mobileNav.contact">Contact</a>
-        <hr role="separator">
-        <a href="/questionnaire.html" class="btn btn-accent-custom mobile-nav-btn" data-i18n="mobileNav.quoteSimulator">Simulateur Devis Complet</a>
-        <a href="/contact.html?urgence=true" class="btn btn-secondary-custom mobile-nav-btn" data-i18n="mobileNav.urgentSupport">Support Urgent</a>
-    </div>
-</header>
-
-<nav class="services-navigation-bar" aria-label="Navigation des services principaux">
-    <div class="container services-nav-container">
-        <ul>
-            <li><a href="/services/infogerance.html"><i class="fas fa-cogs" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.infogerance.titleShort">Infogérance</span></a></li>
-            <li><a href="/services/cybersecurite.html"><i class="fas fa-shield-virus" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.cybersecurity.titleShort">Cybersécurité</span></a></li>
-            <li><a href="/services/cloud.html"><i class="fas fa-cloud" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.cloud.titleShort">Solutions Cloud</span></a></li>
-            <li><a href="/services/reseau.html"><i class="fas fa-network-wired" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.network.titleShort">Réseau</span></a></li>
-            <li><a href="/services/materiel.html"><i class="fas fa-laptop-code" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.hardware.titleShort">Matériel</span></a></li>
-            <li><a href="/services/audit.html"><i class="fas fa-clipboard-check" aria-hidden="true"></i> <span class="service-nav-text" data-i18n="services.audit.titleShort">Audit & Conseil</span></a></li>
-        </ul>
-    </div>
-</nav>
+    </nav>
 <!-- ===== END: MAIN NAVIGATION BLOCK ===== -->
 
-    <main role="main">
-        <section class="hero-section-custom-actions">
-            <div class="container hero-actions-container-v3">
-                <div class="hero-intro-text-v3">
+    <main>
+        <section class="hero-main-v2">
+            <div class="hero-main-v2-background">
+                <div class="hero-main-v2-overlay"></div>
+                <div class="container hero-main-v2-content">
+		   <div class="hero-text-container">
                     <h1 data-i18n="hero.title">Votre Informatique, Notre Expertise.</h1>
                     <p data-i18n="hero.subtitle">Des solutions IT complètes pour TPE/PME, du devis personnalisé au support urgent. Nous sommes là pour vous accompagner.</p>
-                </div>
-                <div class="hero-primary-actions-grid-v3">
-                    <a href="/questionnaire.html" class="hero-action-card-v3">
-                        <div class="hero-action-card-icon-v3"><i class="fas fa-file-signature" aria-hidden="true"></i></div>
-                        <div class="hero-action-card-content-v3">
-                            <h3 data-i18n="hero.actions.quoteSimulator.title">Simulateur de Devis</h3>
-                            <p data-i18n="hero.actions.quoteSimulator.description">Évaluez vos besoins et obtenez une estimation sur mesure.</p>
-                        </div>
-                    </a>
-                    <a href="/contact.html?urgence=true" class="hero-action-card-v3">
-                        <div class="hero-action-card-icon-v3"><i class="fas fa-life-ring" aria-hidden="true"></i></div>
-                        <div class="hero-action-card-content-v3">
-                            <h3 data-i18n="hero.actions.urgentSupport.title">Support Urgent</h3>
-                            <p data-i18n="hero.actions.urgentSupport.description">Une panne ? Notre équipe d'astreinte est là pour vous aider.</p>
-                        </div>
-                    </a>
-                    <a href="/contact.html" class="hero-action-card-v3">
-                        <div class="hero-action-card-icon-v3"><i class="fas fa-comments" aria-hidden="true"></i></div>
-                        <div class="hero-action-card-content-v3">
-                            <h3 data-i18n="hero.actions.getInTouch.title">Prendre Contact</h3>
-                            <p data-i18n="hero.actions.getInTouch.description">Discutons de votre projet et de vos ambitions avec nos experts.</p>
-                        </div>
-                    </a>
+                 </div> 
+		</div>
+            </div>
+            <div class="hero-main-v2-actions-wrapper">
+                <div class="container">
+                    <div class="hero-primary-actions-grid-v3">
+                        <a href="questionnaire.html" class="hero-action-card-v3 hero-action-card-v2-style btn-icon-text-bar">
+                            <span class="btn-icon-wrapper">
+                                <img src="img/icon-simulateur-devis.svg" alt="Icône Simulateur de Devis" class="hero-card-custom-icon"
+                                     onerror="this.style.display='none'; this.parentElement.innerHTML = '<i class=\'fas fa-file-signature\' aria-hidden=\'true\'></i>';">
+                            </span>
+                            <span class="btn-separator-element"></span>
+                            <span class="btn-text-wrapper">
+                                <h3 data-i18n="hero.actions.quoteSimulator.title">Simulateur de Devis</h3>
+                                <p data-i18n="hero.actions.quoteSimulator.description">Évaluez vos besoins et obtenez une estimation sur mesure.</p>
+                            </span>
+                        </a>
+                       <a href="support-urgent.html" class="hero-action-card-v3 hero-action-card-v2-style btn-icon-text-bar">
+                            <span class="btn-icon-wrapper">
+                                <img src="img/icon-support-urgent.svg" alt="Icône Support Urgent" class="hero-card-custom-icon"
+                                     onerror="this.style.display='none'; this.parentElement.innerHTML = '<i class=\'fas fa-life-ring\' aria-hidden=\'true\'></i>';">
+                            </span>
+                            <span class="btn-separator-element"></span>
+                            <span class="btn-text-wrapper">
+                                <h3 data-i18n="hero.actions.urgentSupport.title">Support Urgent</h3>
+                                <p data-i18n="hero.actions.urgentSupport.description">Une panne ? Notre équipe d'astreinte est là pour vous aider.</p>
+                            </span>
+                        </a>
+                        <a href="contact.html" class="hero-action-card-v3 hero-action-card-v2-style btn-icon-text-bar">
+                            <span class="btn-icon-wrapper">
+                                 <img src="img/icon-prendre-contact.svg" alt="Icône Prendre Contact" class="hero-card-custom-icon"
+                                      onerror="this.style.display='none'; this.parentElement.innerHTML = '<i class=\'fas fa-comments\' aria-hidden=\'true\'></i>';">
+                            </span>
+                            <span class="btn-separator-element"></span>
+                            <span class="btn-text-wrapper">
+                                <h3 data-i18n="hero.actions.getInTouch.title">Prendre Contact</h3>
+                                <p data-i18n="hero.actions.getInTouch.description">Discutons de votre projet et de vos ambitions avec nos experts.</p>
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -131,7 +150,7 @@
         <section id="diagnostic-it-inline" class="section-padding section-bg-light">
             <div class="container">
                 <div class="devis-intro-header">
-                    <h2><span data-i18n="diagnostic.titlePart1">Votre</span> <span class="highlight-text" data-i18n="diagnostic.titleHighlight">diagnostic IT</span></h2>
+                    <h2><span data-i18n="diagnostic.titlePart1">Votre</span> <span class="highlight-text" data-i18n="diagnostic.titleHighlight">devis</span></h2>
                     <p class="subtitle-devis" data-i18n="diagnostic.subtitle">en quelques étapes simples</p>
                 </div>
 
@@ -154,10 +173,10 @@
 
                 <h3 class="devis-question" data-i18n="diagnostic.mainQuestion">Quel est votre besoin principal aujourd'hui ?</h3>
 
-                <div class="devis-options-grid">
-                    <a href="/questionnaire.html?type=parc" class="devis-option-card">
-                        <div class="devis-option-image">
-                            <img src="img/diagnostic-parc-informatique.png" alt="Illustration diagnostic parc informatique PME Proxatek" onerror="this.alt='Image placeholder Parc Informatique'; this.src='https://via.placeholder.com/180x130/F9F8FF/5229CD?text=Parc+Info'" loading="lazy">
+                <div class="devis-options-grid devis-options-grid-icons">
+                    <a href="questionnaire.html?type=parc" class="devis-option-card icon-card">
+                        <div class="devis-option-icon-wrapper">
+                            <img src="img/icon-parc-informatique.png" alt="Icône Parc Informatique Proxatek" loading="lazy" onerror="this.style.display='none'; this.src='https://via.placeholder.com/100x100/F9F8FF/2F1A4B?text=Parc';">
                         </div>
                         <div class="devis-option-label">
                             <span data-i18n="diagnostic.options.itAssets">Parc informatique</span>
@@ -165,9 +184,9 @@
                         </div>
                     </a>
 
-                    <a href="/questionnaire.html?type=reseau" class="devis-option-card">
-                        <div class="devis-option-image">
-                            <img src="img/diagnostic-reseau-infrastructure.png" alt="Illustration diagnostic réseau et infrastructure PME Proxatek" onerror="this.alt='Image placeholder Réseau et Infrastructure'; this.src='https://via.placeholder.com/180x130/F9F8FF/5229CD?text=Réseau'" loading="lazy">
+                    <a href="questionnaire.html?type=reseau" class="devis-option-card icon-card">
+                        <div class="devis-option-icon-wrapper">
+                            <img src="img/icon-reseau-infrastructure.png" alt="Icône Réseau et Infrastructure Proxatek" loading="lazy" onerror="this.style.display='none'; this.src='https://via.placeholder.com/100x100/F9F8FF/2F1A4B?text=Réseau';">
                         </div>
                         <div class="devis-option-label">
                             <span data-i18n="diagnostic.options.networkInfrastructure">Réseau & infrastructure</span>
@@ -175,9 +194,9 @@
                         </div>
                     </a>
 
-                    <a href="/questionnaire.html?type=cybersecurite" class="devis-option-card">
-                        <div class="devis-option-image">
-                            <img src="img/diagnostic-donnees-cybersecurite.png" alt="Illustration diagnostic données et cybersécurité PME Proxatek" onerror="this.alt='Image placeholder Données et Cybersécurité'; this.src='https://via.placeholder.com/180x130/F9F8FF/5229CD?text=Cybersecu'" loading="lazy">
+                    <a href="questionnaire.html?type=cybersecurite" class="devis-option-card icon-card">
+                        <div class="devis-option-icon-wrapper">
+                            <img src="img/icon-cloud-securite.png" alt="Icône Données et Cybersécurité Proxatek" loading="lazy" onerror="this.style.display='none'; this.src='https://via.placeholder.com/100x100/F9F8FF/2F1A4B?text=Secu';">
                         </div>
                         <div class="devis-option-label">
                             <span data-i18n="diagnostic.options.dataCybersecurity">Données & cybersécurité</span>
@@ -193,7 +212,7 @@
                 <h2 class="section-title-custom" data-i18n="expertisePoles.title">Découvrez nos Pôles d'Expertise</h2>
                  <p class="section-subtitle-custom" data-i18n="expertisePoles.subtitle">Des prestations complètes pour une infrastructure IT fiable, sécurisée et performante.</p>
                 <div class="prestations-grid-custom">
-                    <a href="/services/infogerance.html" class="prestation-card-custom">
+                    <a href="services/infogerance.html" class="prestation-card-custom">
                         <div class="prestation-card-icon-custom"><i class="fas fa-cogs" aria-hidden="true"></i></div>
                         <h3 data-i18n="services.infogerance.title">Infogérance Proactive</h3>
                         <p data-i18n="services.infogerance.description">Gardez une longueur d'avance avec notre maintenance préventive et notre support illimité.</p>
@@ -205,7 +224,7 @@
                         </ul>
                         <span class="learn-more-custom" data-i18n="common.learnMore">En savoir plus <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                     </a>
-                    <a href="/services/cybersecurite.html" class="prestation-card-custom">
+                    <a href="services/cybersecurite.html" class="prestation-card-custom">
                         <div class="prestation-card-icon-custom"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
                         <h3 data-i18n="services.cybersecurity.title">Cybersécurité Avancée</h3>
                         <p data-i18n="services.cybersecurity.description">Protégez vos données et votre réputation avec nos solutions de sécurité multicouches.</p>
@@ -217,7 +236,7 @@
                         </ul>
                         <span class="learn-more-custom" data-i18n="common.learnMore">En savoir plus <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                     </a>
-                    <a href="/services/cloud.html" class="prestation-card-custom">
+                    <a href="services/cloud.html" class="prestation-card-custom">
                         <div class="prestation-card-icon-custom"><i class="fas fa-cloud" aria-hidden="true"></i></div>
                         <h3 data-i18n="services.cloud.title">Solutions Cloud Flexibles</h3>
                         <p data-i18n="services.cloud.description">Migrez, gérez et optimisez vos applications et données dans le cloud en toute confiance.</p>
@@ -231,7 +250,7 @@
                     </a>
                 </div>
                  <div class="all-services-link-wrapper text-center">
-                    <a href="/services/catalogue.html" class="btn btn-primary-custom btn-large all-services-cta" data-i18n="expertisePoles.allServicesButton">Toutes nos prestations <i class="fas fa-th-list" aria-hidden="true"></i></a>
+                    <a href="services/services.html" class="btn btn-primary-custom btn-large all-services-cta" data-i18n="expertisePoles.allServicesButton">Toutes nos prestations <i class="fas fa-th-list" aria-hidden="true"></i></a> <!-- LIEN VERS LA PAGE HUB -->
                 </div>
             </div>
         </section>
@@ -279,7 +298,7 @@
                     </div>
                 </div>
                 <div class="text-center" style="margin-top: 40px;">
-                    <a href="/services/audit.html" class="btn btn-accent-custom btn-large" data-i18n="auditSection.requestAuditButton">Demander un Audit IT Complet <i class="fas fa-tasks" aria-hidden="true"></i></a>
+                    <a href="questionnaire.html?type=audit" class="btn btn-accent-custom btn-large" data-i18n="auditSection.requestAuditButton">Demander un Audit IT Complet <i class="fas fa-tasks" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
@@ -291,40 +310,40 @@
                 <div class="sector-solutions-grid">
                     <div class="sector-solution-card">
                         <div class="sector-card-image">
-                            <img src="img/secteur-medical.jpg" alt="Solutions informatiques Proxatek pour cabinets médicaux et cliniques" onerror="this.alt='Image placeholder secteur médical'; this.src='https://via.placeholder.com/400x250/F6F3FF/1A0B3D?text=Santé'" loading="lazy">
+                            <img src="img/Cabinets-Medicaux.png" alt="Solutions informatiques Proxatek pour cabinets médicaux et cliniques" loading="lazy" onerror="this.alt='Image placeholder secteur médical'; this.src='https://via.placeholder.com/400x200/F9F8FF/2F1A4B?text=Santé'">
                         </div>
                         <div class="sector-card-content">
                             <span class="sector-tag" data-i18n="sectorSolutions.medical.tag">Santé & Médical</span>
                             <h3 data-i18n="sectorSolutions.medical.title">Cabinets Médicaux & Cliniques</h3>
                             <p data-i18n="sectorSolutions.medical.description">Gestion des dossiers patients (HDS), téléconsultation, conformité RGPD, et infrastructure fiable.</p>
-                            <a href="/solutions/cabinets-medicaux-cliniques.html" class="btn btn-secondary-custom btn-small" data-i18n="sectorSolutions.medical.button">Solutions Santé</a>
+                            <a href="solutions/cabinets-medicaux-cliniques.html" class="btn btn-secondary-custom btn-small" data-i18n="sectorSolutions.medical.button">Solutions Santé</a>
                         </div>
                     </div>
                     <div class="sector-solution-card">
                         <div class="sector-card-image">
-                             <img src="img/secteur-commerce.jpg" alt="Solutions informatiques Proxatek pour commerces, boutiques et points de vente" onerror="this.alt='Image placeholder secteur commerce'; this.src='https://via.placeholder.com/400x250/F6F3FF/1A0B3D?text=Commerce'" loading="lazy">
+                             <img src="img/Boutiques.png" alt="Solutions informatiques Proxatek pour commerces, boutiques et points de vente" loading="lazy" onerror="this.alt='Image placeholder secteur commerce'; this.src='https://via.placeholder.com/400x200/F9F8FF/2F1A4B?text=Commerce'">
                         </div>
                         <div class="sector-card-content">
                             <span class="sector-tag" data-i18n="sectorSolutions.retail.tag">Commerce & Retail</span>
                             <h3 data-i18n="sectorSolutions.retail.title">Boutiques & Points de Vente</h3>
                             <p data-i18n="sectorSolutions.retail.description">Systèmes de caisse, gestion des stocks, solutions e-commerce, et Wi-Fi client sécurisé.</p>
-                            <a href="/solutions/commerce-detail-boutiques.html" class="btn btn-secondary-custom btn-small" data-i18n="sectorSolutions.retail.button">Solutions Commerçants</a>
+                            <a href="solutions/commerce-detail-boutiques.html" class="btn btn-secondary-custom btn-small" data-i18n="sectorSolutions.retail.button">Solutions Commerçants</a>
                         </div>
                     </div>
                     <div class="sector-solution-card">
                         <div class="sector-card-image">
-                            <img src="img/secteur-artisans.jpg" alt="Solutions informatiques Proxatek pour artisans et petites entreprises (TPE)" onerror="this.alt='Image placeholder secteur artisans'; this.src='https://via.placeholder.com/400x250/F6F3FF/1A0B3D?text=Artisans'" loading="lazy">
+                            <img src="img/Artisans.png" alt="Solutions informatiques Proxatek pour artisans et petites entreprises (TPE)" loading="lazy" onerror="this.alt='Image placeholder secteur artisans'; this.src='https://via.placeholder.com/400x200/F9F8FF/2F1A4B?text=Artisans'">
                         </div>
                         <div class="sector-card-content">
                             <span class="sector-tag" data-i18n="sectorSolutions.craftsmen.tag">Artisanat & TPE</span>
                             <h3 data-i18n="sectorSolutions.craftsmen.title">Artisans & Petites Entreprises</h3>
                             <p data-i18n="sectorSolutions.craftsmen.description">Outils de devis/facturation, messagerie pro, sauvegarde, et support IT pour vous concentrer sur votre métier.</p>
-                            <a href="/solutions/artisans-petites-entreprises.html" class="btn btn-secondary-custom btn-small" data-i18n="sectorSolutions.craftsmen.button">Accompagnement TPE</a>
+                            <a href="solutions/artisans-petites-entreprises.html" class="btn btn-secondary-custom btn-small" data-i18n="sectorSolutions.craftsmen.button">Accompagnement TPE</a>
                         </div>
                     </div>
                 </div>
                  <div class="all-services-link-wrapper text-center" style="margin-top: 40px;">
-                    <a href="/solutions/index.html" class="btn btn-outline btn-large">Toutes nos solutions par métier <i class="fas fa-briefcase" aria-hidden="true"></i></a>
+                    <a href="solutions/solution.html" class="btn btn-outline btn-large">Toutes nos solutions par métier <i class="fas fa-briefcase" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
@@ -359,10 +378,10 @@
                             <li><span class="feature-icon-custom"><i class="fas fa-check" aria-hidden="true"></i></span> <span data-i18n="whyProxatek.features.3">Support client réactif, humain et basé en France.</span></li>
                             <li><span class="feature-icon-custom"><i class="fas fa-check" aria-hidden="true"></i></span> <span data-i18n="whyProxatek.features.4">Approche proactive pour prévenir les problèmes avant qu'ils n'arrivent.</span></li>
                         </ul>
-                        <a href="/a-propos.html" class="btn btn-primary-custom" data-i18n="whyProxatek.discoverButton">Découvrir notre équipe et nos valeurs</a>
+                        <a href="a-propos.html" class="btn btn-primary-custom" data-i18n="whyProxatek.discoverButton">Découvrir notre équipe et nos valeurs</a>
                     </div>
                     <div class="feature-image-content">
-                        <img src="img/proxatek-valeurs.jpg" alt="Équipe Proxatek collaborant sur un projet IT pour PME" onerror="this.alt='Image placeholder valeurs Proxatek'; this.src='https://via.placeholder.com/500x400/F6F3FF/1A0B3D?text=Nos+Valeurs'" loading="lazy">
+                        <img src="img/proxatek-valeurs.jpg" alt="Équipe Proxatek collaborant sur un projet IT pour PME" onerror="this.alt='Image placeholder valeurs Proxatek'; this.src='https://via.placeholder.com/500x400/F9F8FF/2F1A4B?text=Nos+Valeurs'" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -371,67 +390,82 @@
         <section class="focus-section section-padding section-bg-accent-gradient">
             <div class="container focus-content-wrapper">
                  <div class="focus-image-wrapper">
-                    <img src="img/proxatek-nouveau-service.png" alt="Solution de supervision proactive Proxatek affichée sur un ordinateur portable" onerror="this.alt='Image placeholder nouveau service'; this.src='https://via.placeholder.com/450x380/D9006C/FFFFFF?text=Nouveauté'" loading="lazy">
+                    <img src="img/proxatek-nouveau-service.png" alt="Solution de supervision proactive Proxatek affichée sur un ordinateur portable" onerror="this.alt='Image placeholder nouveau service'; this.src='https://via.placeholder.com/450x380/FFFFFF/E535AB?text=Nouveauté'" loading="lazy">
                 </div>
                 <div class="focus-text-wrapper">
                     <span class="eyebrow-text-light" data-i18n="newService.eyebrow">Nouveauté Proxatek</span>
                     <h2 data-i18n="newService.title">Supervision Proactive de Votre Parc Informatique 24/7</h2>
                     <p data-i18n="newService.description">Anticipez les pannes et optimisez vos performances grâce à notre solution de monitoring intelligent. Détection et résolution des problèmes avant qu'ils n'impactent votre activité.</p>
-                    <a href="/services/supervision.html" class="btn btn-white-outline-on-dark large-action-btn" data-i18n="newService.discoverButton">Découvrir la Solution <i class="fas fa-search-plus" aria-hidden="true"></i></a>
+                    <a href="services/supervision.html" class="btn btn-white-outline-on-dark large-action-btn" data-i18n="newService.discoverButton">Découvrir la Solution <i class="fas fa-search-plus" aria-hidden="true"></i></a>
                     <p class="focus-note" data-i18n="newService.note">*Compatible avec tous types d'infrastructures et adaptable à vos besoins.</p>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials-proxatek" class="section-padding section-bg-light">
+                <section id="testimonials-proxatek" class="section-padding">
             <div class="container">
                 <h2 class="section-title-custom" data-i18n="testimonials.title">Ils nous ont fait confiance, ils témoignent.</h2>
                 <p class="section-subtitle-custom" data-i18n="testimonials.subtitle">La satisfaction de nos clients est notre plus grande réussite. Découvrez leurs expériences.</p>
                 <div class="testimonial-grid-custom">
+
                     <div class="case-study-card-custom">
                         <div class="case-study-header-custom">
-                            <img src="img/logo-entreprise-a.png" alt="Logo Alpha Conseil, client Proxatek" class="company-logo-testimonial-custom" onerror="this.alt='Logo Entreprise A'; this.src='https://via.placeholder.com/60/E5D9FF/5229CD?text=A'" loading="lazy">
+                            <div class="company-logo-placeholder">
+                            </div>
                             <div class="case-study-info-custom">
-                                <h3 data-i18n="testimonials.case1.title">"Une sérénité retrouvée pour Alpha Conseil"</h3>
-                                <span class="industry-tag-custom" data-i18n="testimonials.case1.tag">Cabinet de Conseil</span>
+                                <h3 data-i18n="testimonials.caseAlteora.title">"Une sérénité retrouvée pour Altéora Conseil"</h3>
+                                <span class="industry-tag-custom" data-i18n="testimonials.caseAlteora.tag">Cabinet de Conseil</span>
                             </div>
                         </div>
-                        <p class="testimonial-quote-custom" data-i18n="testimonials.case1.quote">"Proxatek a su moderniser notre infrastructure tout en respectant nos contraintes budgétaires. Leur équipe est incroyablement réactive et pédagogue. Nous recommandons sans hésiter !"</p>
+                        <p class="testimonial-quote-custom" data-i18n="testimonials.caseAlteora.quote">"Proxatek a su moderniser notre infrastructure tout en respectant nos contraintes budgétaires. Leur équipe est incroyablement réactive et pédagogue. Nous recommandons sans hésiter !"</p>
                         <div class="results-section-custom">
                             <h4 data-i18n="testimonials.keyImpacts">Impacts Clés :</h4>
-                            <div class="results-grid-custom">
-                                <div class="result-item-custom"><span class="result-number-custom">-40%</span> <span data-i18n="testimonials.case1.impact1">Temps d'arrêt</span></div>
-                                <div class="result-item-custom"><span class="result-number-custom">+25%</span> <span data-i18n="testimonials.case1.impact2">Productivité</span></div>
+                            <div class="results-boxes-grid-custom">
+                                <div class="result-box-item-custom">
+                                    <span class="result-number-custom">-40%</span>
+                                    <span class="result-text-custom" data-i18n="testimonials.caseAlteora.impact1">Temps d'arrêt</span>
+                                </div>
+                                <div class="result-box-item-custom">
+                                    <span class="result-number-custom">+25%</span>
+                                    <span class="result-text-custom" data-i18n="testimonials.caseAlteora.impact2">Productivité</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="case-study-card-custom">
-                         <div class="case-study-header-custom">
-                            <img src="img/logo-entreprise-b.png" alt="Logo Beta Industries, client Proxatek" class="company-logo-testimonial-custom" onerror="this.alt='Logo Entreprise B'; this.src='https://via.placeholder.com/60/E5D9FF/5229CD?text=B'" loading="lazy">
+                        <div class="case-study-header-custom">
+                            <img src="img/logo-dynexa.png" alt="Logo Dynexa Industries" class="company-logo-testimonial-custom" onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin', '<div class=\'company-logo-placeholder\'>D</div>'); this.onerror=null;">
                             <div class="case-study-info-custom">
-                                <h3 data-i18n="testimonials.case2.title">"Migration Cloud et Sécurité pour Beta Industries"</h3>
-                                <span class="industry-tag-custom" data-i18n="testimonials.case2.tag">Industrie</span>
+                                <h3 data-i18n="testimonials.caseDynexa.title">"Migration Cloud et Sécurité pour Dynexa Industries"</h3>
+                                <span class="industry-tag-custom" data-i18n="testimonials.caseDynexa.tag">Industrie</span>
                             </div>
                         </div>
-                         <p class="testimonial-quote-custom" data-i18n="testimonials.case2.quote">"La cybersécurité était notre principale préoccupation. Proxatek a mis en place une stratégie globale qui nous a permis de dormir sur nos deux oreilles. Un partenaire fiable et expert."</p>
+                        <p class="testimonial-quote-custom" data-i18n="testimonials.caseDynexa.quote">"La cybersécurité était notre principale préoccupation. Proxatek a mis en place une stratégie globale qui nous a permis de dormir sur nos deux oreilles. Un partenaire fiable et expert."</p>
                         <div class="results-section-custom">
                             <h4 data-i18n="testimonials.keyImpacts">Impacts Clés :</h4>
-                            <div class="results-grid-custom">
-                                <div class="result-item-custom"><span class="result-number-custom">100%</span> <span data-i18n="testimonials.case2.impact1">Données sécurisées</span></div>
-                                <div class="result-item-custom"><span data-i18n="testimonials.case2.impact2part1">Réponse</span> <span class="result-number-custom">Support < 1h</span> <span data-i18n="testimonials.case2.impact2part2"></span></div>
+                            <div class="results-boxes-grid-custom">
+                                <div class="result-box-item-custom">
+                                    <span class="result-number-custom">100%</span>
+                                    <span class="result-text-custom" data-i18n="testimonials.caseDynexa.impact1">Données sécurisées</span>
+                                </div>
+                                <div class="result-box-item-custom">
+                                    <span class="result-text-label-custom" data-i18n="testimonials.caseDynexa.impact2part1">Réponse</span>
+                                    <span class="result-number-custom highlight">Support < 1h</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+
+                </div> 
+            </div> 
         </section>
 
         <section id="devenir-partenaire" class="section-padding section-partner-cta">
-            <div class="partner-cta-background-image" style="background-image: url('img/background-partenariat.jpg');"></div>
             <div class="container partner-cta-content">
                 <h2 class="partner-cta-title" data-i18n="partnership.title">Collaborons Ensemble !</h2>
                 <p class="partner-cta-subtitle" data-i18n="partnership.subtitle">Vous souhaitez proposer les solutions Proxatek à vos clients ? Découvrez notre programme partenaire et développons nos activités conjointement.</p>
-                <a href="/partenariat.html" class="btn btn-light large-partner-cta-btn" data-i18n="partnership.button">Devenir Partenaire Proxatek <i class="fas fa-handshake" aria-hidden="true"></i></a>
+                <a href="partenariat.html" class="btn btn-white-outline-on-dark large-action-btn large-partner-cta-btn" data-i18n="partnership.button">Devenir Partenaire Proxatek <i class="fas fa-handshake" aria-hidden="true"></i></a>
             </div>
         </section>
 
@@ -440,19 +474,19 @@
                 <h2 class="cta-title-custom" data-i18n="finalCta.title">Prêt à donner une nouvelle dimension à votre IT ?</h2>
                 <p class="cta-subtitle-custom" data-i18n="finalCta.subtitle">Que ce soit pour un devis, un conseil ou une urgence, notre équipe est prête à vous accompagner.</p>
                 <div class="cta-buttons-group">
-                    <a href="/questionnaire.html" class="btn btn-accent-custom btn-large" data-i18n="finalCta.quoteButton">Simulateur de Devis <i class="fas fa-calculator" aria-hidden="true"></i></a>
-                    <a href="/contact.html" class="btn btn-primary-custom btn-large" data-i18n="finalCta.appointmentButton">Prendre Rendez-vous <i class="fas fa-calendar-alt" aria-hidden="true"></i></a>
+                    <a href="questionnaire.html" class="btn btn-accent-custom btn-large" data-i18n="finalCta.quoteButton">Simulateur de Devis <i class="fas fa-calculator" aria-hidden="true"></i></a>
+                    <a href="contact.html" class="btn btn-primary-custom btn-large" data-i18n="finalCta.appointmentButton">Prendre Rendez-vous <i class="fas fa-calendar-alt" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer-proxatek" role="contentinfo">
+    <footer class="site-footer-proxatek">
         <div class="container footer-grid-proxatek">
             <div class="footer-col footer-col-about">
-                <a href="/index.html" title="Accueil Proxatek - Solutions IT pour PME">
+                <a href="index.html" title="Accueil Proxatek - Solutions IT pour PME">
                     <img src="img/proxatek-logo-principal-blanc.png" alt="Proxatek Logo Blanc - Solutions IT pour PME" class="footer-logo-img" onerror="this.style.display='none'; this.onerror=null; document.getElementById('logoFooterTextFallback').style.display='block';" loading="lazy">
-                    <span id="logoFooterTextFallback" class="logo-text-fallback" style="display:none; color:var(--custom-text-light); margin-bottom:15px; font-size:22px; font-weight:bold;">PROXATEK</span>
+                    <span id="logoFooterTextFallback" class="logo-text-fallback" style="display:none; color:var(--custom-text-light-primary); margin-bottom:15px; font-size:22px; font-weight:bold;">PROXATEK</span>
                 </a>
                 <p data-i18n="footer.about.description">Proxatek, votre partenaire informatique de confiance. Nous aidons les PME à exploiter le plein potentiel de la technologie.</p>
                 <div class="social-media-links">
@@ -464,26 +498,26 @@
             <div class="footer-col">
                 <h4 data-i18n="footer.explore.title">Explorer</h4>
                 <ul>
-                    <li><a href="/index.html" data-i18n="footer.explore.home" class="active">Accueil</a></li>
-                    <li><a href="/#prestations-proxatek" data-i18n="footer.explore.services">Nos Prestations</a></li>
-                    <li><a href="/#pourquoi-proxatek" data-i18n="footer.explore.whyUs">Pourquoi Nous ?</a></li>
-                    <li><a href="/a-propos.html" data-i18n="footer.explore.aboutUs">Qui sommes-nous ?</a></li>
-                    <li><a href="/questionnaire.html" data-i18n="footer.explore.quoteSimulator">Simulateur de Devis</a></li>
-                    <li><a href="/actualites.html" data-i18n="footer.explore.newsBlog">Actualités & Blog</a></li>
-                    <li><a href="/partenariat.html" data-i18n="footer.explore.partnership">Devenir Partenaire</a></li>
-                    <li><a href="/contact.html" data-i18n="footer.explore.contact">Contact</a></li>
+                    <li><a href="index.html" data-i18n="footer.explore.home" class="active">Accueil</a></li>
+                    <li><a href="#prestations-proxatek" data-i18n="footer.explore.services">Nos Prestations</a></li>
+                    <li><a href="#pourquoi-proxatek" data-i18n="footer.explore.whyUs">Pourquoi Nous ?</a></li>
+                    <li><a href="a-propos.html" data-i18n="footer.explore.aboutUs">Qui sommes-nous ?</a></li>
+                    <li><a href="questionnaire.html" data-i18n="footer.explore.quoteSimulator">Simulateur de Devis</a></li>
+                    <li><a href="actualites.html" data-i18n="footer.explore.newsBlog">Actualités & Blog</a></li>
+                    <li><a href="partenariat.html" data-i18n="footer.explore.partnership">Devenir Partenaire</a></li>
+                    <li><a href="contact.html" data-i18n="footer.explore.contact">Contact</a></li>
                 </ul>
             </div>
              <div class="footer-col">
                 <h4 data-i18n="footer.keyServices.title">Services Clés</h4>
                 <ul>
-                    <li><a href="/services/infogerance.html" data-i18n="services.infogerance.title">Infogérance & Maintenance</a></li>
-                    <li><a href="/services/cybersecurite.html" data-i18n="services.cybersecurity.title">Cybersécurité & Sauvegarde</a></li>
-                    <li><a href="/services/cloud.html" data-i18n="services.cloud.title">Solutions Cloud</a></li>
-                    <li><a href="/services/reseau.html" data-i18n="services.network.title">Réseau & Infrastructure</a></li>
-                    <li><a href="/services/audit.html" data-i18n="services.audit.title">Audit & Conseil</a></li>
-                    <li><a href="/services/materiel.html" data-i18n="services.hardware.title">Matériel Informatique</a></li>
-                    <li><a href="/services/supervision.html" data-i18n="services.supervision.title">Supervision Proactive</a></li>
+                    <li><a href="services/infogerance.html" data-i18n="services.infogerance.title">Infogérance & Maintenance</a></li>
+                    <li><a href="services/cybersecurite.html" data-i18n="services.cybersecurity.title">Cybersécurité & Sauvegarde</a></li>
+                    <li><a href="services/cloud.html" data-i18n="services.cloud.title">Solutions Cloud</a></li>
+                    <li><a href="services/reseau.html" data-i18n="services.network.title">Réseau & Infrastructure</a></li>
+                    <li><a href="services/audit.html" data-i18n="services.audit.title">Audit & Conseil</a></li>
+                    <li><a href="services/materiel.html" data-i18n="services.hardware.title">Matériel Informatique</a></li>
+                    <li><a href="services/supervision.html" data-i18n="services.supervision.title">Supervision Proactive</a></li>
                 </ul>
             </div>
             <div class="footer-col footer-col-contact">
@@ -496,14 +530,69 @@
             </div>
         </div>
         <div class="footer-bottom-proxatek">
-            <p>© <span class="current-year-proxatek"></span> <span data-i18n="footer.copyrightText">Proxatek SAS. Tous droits réservés.</span> | <a href="/mentions-legales.html" data-i18n="footer.legalNotices">Mentions Légales</a> | <a href="/politique-confidentialite.html" data-i18n="footer.privacyPolicy">Confidentialité</a></p>
+            <p>© <span class="current-year-proxatek"></span> <span data-i18n="footer.copyrightText">Proxatek SAS. Tous droits réservés.</span> | <a href="mentions-legales.html" data-i18n="footer.legalNotices">Mentions Légales</a> | <a href="politique-confidentialite.html" data-i18n="footer.privacyPolicy">Confidentialité</a></p>
         </div>
     </footer>
 
-    <a href="/contact.html?urgence=true" class="floating-help-btn-proxatek" aria-label="Contacter Proxatek pour un support urgent">
+    <a href="support-urgent.html" class="floating-help-btn-proxatek" aria-label="Contacter Proxatek pour un support urgent">
         <i class="fas fa-headset" aria-hidden="true"></i>
     </a>
 
-    <script src="script.js"></script> <!-- CHEMIN RELATIF (si script.js est au même niveau que index.html) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle-custom');
+            const mobileNavMenu = document.getElementById('mobileNavMenuUniversal');
+            const iconOpen = mobileMenuToggle ? mobileMenuToggle.querySelector('.icon-open') : null;
+            const iconClose = mobileMenuToggle ? mobileMenuToggle.querySelector('.icon-close') : null;
+
+            if (mobileMenuToggle && mobileNavMenu && iconOpen && iconClose) {
+                mobileMenuToggle.addEventListener('click', function () {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    mobileNavMenu.classList.toggle('active');
+                    
+                    if (mobileNavMenu.classList.contains('active')) {
+                        iconOpen.style.display = 'none';
+                        iconClose.style.display = 'inline';
+                    } else {
+                        iconOpen.style.display = 'inline';
+                        iconClose.style.display = 'none';
+                    }
+                });
+                mobileNavMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (mobileNavMenu.classList.contains('active')) {
+                            mobileMenuToggle.click();
+                        }
+                    });
+                });
+            }
+
+            const yearSpan = document.querySelector('.current-year-proxatek');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+            const progressBar = document.querySelector('.progress-bar-container');
+            if (progressBar) {
+                const lines = progressBar.querySelectorAll('.progress-line');
+                const stages = progressBar.querySelectorAll('.progress-stage');
+                
+                lines.forEach(line => line.style.backgroundColor = ''); 
+                stages.forEach(stage => stage.classList.remove('active'));
+                if(stages.length > 0) stages[0].classList.add('active'); 
+
+                if (progressBar.classList.contains('step-1')) {
+                } else if (progressBar.classList.contains('step-2')) {
+                    if(stages.length > 1) stages[1].classList.add('active');
+                    if(lines.length > 0) lines[0].style.backgroundColor = 'var(--custom-accent-magenta)';
+                } else if (progressBar.classList.contains('step-3')) {
+                    if(stages.length > 1) stages[1].classList.add('active');
+                    if(stages.length > 2) stages[2].classList.add('active');
+                    lines.forEach(line => line.style.backgroundColor = 'var(--custom-accent-magenta)');
+                }
+            }
+        });
+    </script>
 </body>
 </html>

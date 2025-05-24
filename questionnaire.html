@@ -2,27 +2,33 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Simulateur de Devis IT - Proxatek</title>
+  <title>Simulateur de Devis IT Autonome - Proxatek</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description" content="Utilisez notre simulateur pour obtenir une première estimation de vos besoins en services informatiques et un devis personnalisé de Proxatek.">
+  <meta name="description" content="Simulateur autonome pour estimation de besoins IT.">
 
-  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="questionnaire_standalone.css"> 
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <link rel="icon" href="img/proxatek-icon-bleu.png" type="image/png">
+  <!-- Optionnel: Favicon
+  <link rel="icon" href="img/LogoP.png" type="image/png"> 
+  -->
 </head>
 <body class="questionnaire-page-active">
 
   <header class="header-fullwidth-questionnaire"> 
     <div class="header-questionnaire container"> 
       <div class="logo-questionnaire">
-        <picture>
-          <source media="(max-width:850px)" srcset="img/proxatek-logo-violet_P.png">
-          <img src="img/proxatek-logo-violet_full.png" alt="Logo Proxatek" loading="eager"> <!-- Eager car visible immédiatement -->
-        </picture>
-      </div>
-      <div class="promo-questionnaire">
+        <a href="#" title="Accueil Simulateur Proxatek"> <!-- ou lien vers index.html si vous préférez -->
+            <picture>
+                <source media="(max-width:850px)" srcset="img/LogoP.png">
+                <img src="img/Logoproxatek.png" alt="Logo Proxatek - Simulateur de Devis"
+                     onerror="this.style.display='none'; this.onerror=null; document.getElementById('logoTextFallbackQuestionnaire').style.display='block';"
+                     loading="eager" style="max-height: 45px;">
+            </picture>
+            <span id="logoTextFallbackQuestionnaire" class="logo-text-fallback-questionnaire" style="display:none;">PROXATEK</span>
+        </a>
+      </div>      <div class="promo-questionnaire">
         Bienvenue ! Profitez de <strong>250 € offerts</strong><br>
         sur votre premier projet informatique
       </div>
@@ -38,8 +44,9 @@
     
     <div class="progress-bar-wrapper-proxatek container"> 
       <div class="steps-proxatek">
-        <span class="step-label current" id="step-1-label">Utilisateur</span>
-        <span class="step-label" id="step-2-label">Sécurité</span>
+        <!-- Les labels textuels sont des placeholders initiaux, le JS gère la classe .current -->
+        <span class="step-label current" id="step-1-label">Besoin</span> 
+        <span class="step-label" id="step-2-label">Détails</span>
         <span class="step-label" id="step-3-label">Devis</span>
       </div>
       <div class="progress-bar-proxatek">
@@ -47,13 +54,15 @@
       </div>
     </div>
 
+    <!-- Conteneur pour les questions dynamiques -->
     <div id="question-container" class="container">
         <!-- Le contenu des questions sera injecté ici par JavaScript -->
+        <!-- Cette section est maintenant vide pour que questionnaire.js la remplisse dès le début. -->
     </div>
   </main>
 
-  <footer class="site-footer-custom-minimal" style="text-align: center; padding: 20px 0; border-top: 1px solid var(--custom-border-color); margin-top: auto; flex-shrink:0;">
-    <p style="margin:0; color: var(--custom-text-secondary); font-size: 0.9rem;">© <span class="current-year-proxatek"></span> Proxatek SAS. Tous droits réservés.</p>
+  <footer style="text-align: center; padding: 20px 0; border-top: 1px solid var(--custom-border-color); margin-top: auto; flex-shrink:0; background-color: var(--custom-lavender-bg);">
+    <p style="margin:0; color: var(--custom-text-secondary); font-size: 0.9rem;">© <span id="currentYearFooter"></span> Proxatek. Tous droits réservés.</p>
   </footer>
 
   <script src="js/config.js"></script>
@@ -61,18 +70,12 @@
   
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Gestion de l'année pour ce footer minimaliste.
-        const currentYearSpan = document.querySelector('.current-year-proxatek'); 
+        const currentYearSpan = document.getElementById('currentYearFooter'); 
         if (currentYearSpan) {
-            // Le script global (script.js) devrait aussi cibler cette classe.
-            // Si le script global n'est pas chargé sur cette page pour une raison quelconque
-            // ou si ce script s'exécute avant, ceci assurera que l'année est mise.
-            // Si le script global le fait aussi, ce n'est pas grave, le contenu sera identique.
-            const year = new Date().getFullYear().toString();
-            if (currentYearSpan.textContent !== year) {
-                 currentYearSpan.textContent = year;
-            }
+            currentYearSpan.textContent = new Date().getFullYear().toString();
         }
+        // Le script questionnaire.js s'occupe d'appeler showStep('accueil')
+        // donc plus besoin de logique complexe ici pour gérer une première étape statique.
     });
   </script>
 </body>

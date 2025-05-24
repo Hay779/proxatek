@@ -1,0 +1,345 @@
+/* actualites.css */
+
+/* Styles pour la section Hero de la page Actualités */
+.hero-service {
+    /* Pas de styles spécifiques ici si c'est un hero générique déjà stylé dans style.css */
+    /* Si des styles uniques sont nécessaires pour le hero de la page actualités, ajoutez-les ici. */
+    /* Exemple: padding spécifique */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.hero-service .breadcrumb-service {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.hero-service .breadcrumb-service a {
+    /* La couleur est déjà inline, mais on pourrait la forcer ici si besoin */
+}
+
+.hero-service h1 {
+    /* La couleur est déjà inline, mais on pourrait la forcer ici si besoin */
+    font-size: 2.5rem; /* Ajustez si besoin, sera écrasé par les media queries de style.css */
+    margin-bottom: 10px;
+}
+.hero-service .highlight-text-service {
+    /* La couleur est déjà inline */
+}
+
+.hero-service .hero-subtitle-service {
+    font-size: 1.05rem; /* Ajustez si besoin, sera écrasé par les media queries de style.css */
+    margin-top: 10px;
+}
+
+
+/* Filtres pour les actualités */
+.filters-actualites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filters-actualites .filter-btn {
+    background-color: var(--custom-bg-lavender-mist);
+    color: var(--custom-primary-dark);
+    border: 1px solid var(--custom-border-subtle-lavender);
+    padding: 8px 18px;
+    border-radius: var(--custom-border-radius-buttons);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--custom-transition);
+}
+
+.filters-actualites .filter-btn:hover {
+    background-color: var(--custom-primary-dark);
+    color: var(--custom-text-light-primary);
+    border-color: var(--custom-primary-dark);
+}
+
+.filters-actualites .filter-btn.active {
+    background-color: var(--custom-accent-magenta);
+    color: var(--custom-text-light-primary);
+    border-color: var(--custom-accent-magenta);
+}
+
+/* Grille des articles */
+.articles-grid.product-like-grid { /* Ajout de .product-like-grid pour spécificité */
+    display: grid;
+    /* Afficher jusqu'à 4 articles par ligne sur les écrans larges, 3 sur tablettes moyennes, 2 sur petites tablettes/grands mobiles, 1 sur mobile */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* minmax ajusté pour des cartes plus petites */
+    gap: 20px; /* Espace entre les cartes légèrement réduit */
+}
+
+.article-card { 
+    background-color: var(--custom-bg-white);
+    border-radius: var(--custom-border-radius-cards);
+    box-shadow: var(--custom-box-shadow-soft);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--custom-border-subtle-lavender);
+    /* max-width: 320px; */ /* Décommentez et ajustez si vous préférez une largeur max fixe plutôt que le responsive grid */
+}
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--custom-box-shadow-soft-hover);
+}
+
+.article-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.article-card-image {
+    width: 100%;
+    height: 160px; /* Hauteur de l'image réduite */
+    overflow: hidden;
+}
+.article-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.article-card:hover .article-card-image img {
+    transform: scale(1.05);
+}
+
+.article-card-content {
+    padding: 15px; /* Padding réduit */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-category-tag {
+    display: inline-block;
+    background-color: var(--custom-accent-magenta);
+    color: var(--custom-text-light-primary);
+    padding: 3px 9px; /* Padding réduit */
+    border-radius: var(--custom-border-radius-buttons);
+    font-size: 0.7rem; /* Taille de police réduite */
+    font-weight: 600;
+    margin-bottom: 10px; /* Marge réduite */
+    align-self: flex-start;
+    text-transform: uppercase;
+}
+/* Styles spécifiques pour les tags de catégories si besoin */
+.article-card[data-category="cybersecurite"] .article-category-tag { background-color: var(--custom-purple-primary); }
+.article-card[data-category="cloud"] .article-category-tag { background-color: #5229CD; } 
+.article-card[data-category="proxatek-news"] .article-category-tag { background-color: var(--custom-accent-magenta); }
+.article-card[data-category="productivite"] .article-category-tag { background-color: #2F1C6A; }
+
+
+.article-title { 
+    font-size: 1.1rem; /* Taille de police du titre réduite */
+    margin-bottom: 8px; /* Marge réduite */
+    color: var(--custom-text-dark-primary);
+    line-height: 1.35;
+}
+
+.article-excerpt {
+    font-size: 0.85rem; /* Taille de police de l'extrait réduite */
+    color: var(--custom-text-medium-gray);
+    margin-bottom: 12px; /* Marge réduite */
+    flex-grow: 1; 
+    line-height: 1.5;
+}
+
+.article-card-footer {
+    margin-top: auto; 
+    padding-top: 10px; /* Padding réduit */
+    border-top: 1px solid var(--custom-border-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem; /* Taille de police réduite */
+    color: var(--custom-text-medium-gray);
+}
+.article-date i {
+    margin-right: 5px; /* Marge réduite */
+    color: var(--custom-primary-dark);
+}
+.learn-more-inline {
+    font-weight: 600;
+    color: var(--custom-primary-dark);
+}
+.learn-more-inline i {
+    margin-left: 4px;
+    transition: transform 0.2s ease;
+}
+.article-card:hover .learn-more-inline i {
+    transform: translateX(3px);
+}
+
+/* Pagination */
+.pagination-proxatek {
+    margin-top: 40px;
+    text-align: center;
+}
+.pagination-proxatek ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.pagination-proxatek ul li a,
+.pagination-proxatek ul li span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 10px;
+    border: 1px solid var(--custom-border-subtle-lavender);
+    background-color: var(--custom-bg-white);
+    color: var(--custom-primary-dark);
+    border-radius: var(--custom-border-radius-cards);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--custom-transition);
+}
+.pagination-proxatek ul li a:hover {
+    background-color: var(--custom-bg-lavender-mist);
+    border-color: var(--custom-primary-dark);
+}
+.pagination-proxatek ul li a.active,
+.pagination-proxatek ul li a.active:hover {
+    background-color: var(--custom-accent-magenta);
+    color: var(--custom-text-light-primary);
+    border-color: var(--custom-accent-magenta);
+    cursor: default;
+}
+.pagination-proxatek ul li a.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: var(--custom-bg-lavender-mist);
+}
+.pagination-proxatek ul li a.disabled:hover {
+    background-color: var(--custom-bg-lavender-mist);
+    border-color: var(--custom-border-subtle-lavender);
+}
+.pagination-proxatek ul li span.dots {
+    border: none;
+    background-color: transparent;
+}
+
+/* Section Newsletter CTA (spécifique à la page Actualités) */
+.newsletter-cta-section {
+    padding: 60px 0;
+}
+.newsletter-cta-section h2 {
+    font-size: 2rem; 
+    margin-bottom: 15px;
+}
+.newsletter-cta-section p {
+    font-size: 1rem; 
+    line-height: 1.7;
+}
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    padding: 14px 20px;
+    border-radius: var(--custom-border-radius-buttons);
+    border: 1px solid rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.1);
+    color: var(--custom-text-light-primary);
+    font-size: 0.95rem;
+    min-width: 250px; 
+}
+.newsletter-form input[type="email"]::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+.newsletter-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--custom-text-light-primary);
+    background-color: rgba(255,255,255,0.2);
+}
+.newsletter-form button[type="submit"] {
+    padding: 14px 28px; 
+}
+
+/* Media Queries pour actualites.css */
+
+/* Responsive pour la grille d'articles */
+/* Pour les écrans très larges, on peut aller jusqu'à 4 colonnes */
+@media (min-width: 1200px) {
+    .articles-grid.product-like-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    }
+}
+
+/* Pour les tablettes et écrans larges, 3 colonnes */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .articles-grid.product-like-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    }
+}
+
+/* Pour les petites tablettes et grands mobiles, 2 colonnes */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .articles-grid.product-like-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    }
+     .hero-service h1 { font-size: 2.2rem; }
+    .hero-service .hero-subtitle-service { font-size: 1rem; }
+    .article-title { font-size: 1.05rem; } /* Un peu plus petit sur tablette */
+    .newsletter-cta-section h2 { font-size: 1.8rem; }
+}
+
+/* Pour les mobiles, 1 colonne */
+@media (max-width: 767.98px) {
+    .articles-grid.product-like-grid {
+        grid-template-columns: 1fr; /* 1 colonne */
+    }
+    .hero-service { padding-top: 40px; padding-bottom: 40px; }
+    .hero-service h1 { font-size: 1.9rem; }
+    .hero-service .hero-subtitle-service { font-size: 0.95rem; }
+    
+    .filters-actualites { margin-bottom: 30px; }
+    .filters-actualites .filter-btn { font-size: 0.85rem; padding: 7px 15px;}
+
+    .article-card-image { height: 180px; } /* Peut rester un peu plus grand sur mobile si une seule colonne */
+    .article-card-content { padding: 15px; }
+    .article-title { font-size: 1.1rem; } /* Titre un peu plus grand sur mobile car plus d'espace vertical */
+    .article-excerpt { font-size: 0.85rem; }
+    .article-card-footer { font-size: 0.75rem; padding-top: 10px; }
+
+    .pagination-proxatek ul li a, .pagination-proxatek ul li span {
+        min-width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+    .newsletter-cta-section { padding: 50px 0; }
+    .newsletter-cta-section h2 { font-size: 1.6rem; }
+    .newsletter-cta-section p { font-size: 0.95rem; }
+    .newsletter-form input[type="email"], .newsletter-form button[type="submit"] {
+        width: 100%; 
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) { /* Très petits mobiles */
+    .hero-service h1 { font-size: 1.7rem; }
+    .article-title { font-size: 1rem; } /* Encore un peu plus petit si nécessaire */
+    .article-card-image { height: 150px; } /* Plus petit pour petits mobiles */
+}
